@@ -57,6 +57,9 @@
     <Compile Include="CoverallsAliases.cs" />
     <Compile Include="CoverallsIoRunner.cs" />
     <Compile Include="CoverallsIoSettings.cs" />
+    <Compile Include="CoverallsNetReportType.cs" />
+    <Compile Include="CoverallsNetRunner.cs" />
+    <Compile Include="CoverallsNetSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
