@@ -72,6 +72,8 @@
   <ItemGroup>
     <Compile Include="CoverallsIoRunnerFixture.cs" />
     <Compile Include="CoverallsIoRunnerTests.cs" />
+    <Compile Include="CoverallsNetRunnerFixture.cs" />
+    <Compile Include="CoverallsNetRunnerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

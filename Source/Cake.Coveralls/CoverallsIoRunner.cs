@@ -38,7 +38,10 @@ namespace Cake.Coveralls
                 throw new ArgumentNullException(nameof(codeCoverageReportFilePath));
             }
 
-            settings = settings ?? new CoverallsIoSettings();
+            if (settings == null)
+            {
+                throw new ArgumentNullException(nameof(settings));
+            }
 
             Run(settings, GetArguments(codeCoverageReportFilePath, settings));
         }
