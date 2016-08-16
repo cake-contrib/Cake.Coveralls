@@ -70,10 +70,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoverallsIoRunnerFixture.cs" />
+    <Compile Include="CoverallsIoRunnerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cake.Coveralls\Cake.Coveralls.csproj">
+      <Project>{ab56ef4a-72de-492d-a726-ef434f89d8f5}</Project>
+      <Name>Cake.Coveralls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\gep13.xUnitRunner.0.1.0\build\gep13.xUnitRunner.targets" Condition="Exists('..\packages\gep13.xUnitRunner.0.1.0\build\gep13.xUnitRunner.targets')" />

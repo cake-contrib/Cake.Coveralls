@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Summary numSequencePoints="62" visitedSequencePoints="56" numBranchPoints="42" visitedBranchPoints="39" sequenceCoverage="90.32" branchCoverage="92.86" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="6" numClasses="7" visitedMethods="23" numMethods="26" />
+  <Modules>
+    <Module skippedDueTo="Filter" hash="D8-53-B0-07-8D-F9-9A-13-7D-98-00-E6-F2-C4-C4-74-70-5D-80-7A">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</ModulePath>
+      <ModuleTime>2015-11-30T20:15:42.9516397Z</ModuleTime>
+      <ModuleName>mscorlib</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="C9-73-ED-04-00-C6-51-60-27-F2-A0-0B-90-05-B8-86-6E-DB-6B-00">
+      <ModulePath>C:\github\gep13\Cake.Gem\tools\xunit.runner.console\tools\xunit.console.exe</ModulePath>
+      <ModuleTime>2015-09-27T09:34:28Z</ModuleTime>
+      <ModuleName>xunit.console</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2C-BE-1B-C3-02-35-ED-A0-CC-7C-AB-BA-F1-C5-8D-DE-79-03-01-9A">
+      <ModulePath>C:\github\gep13\Cake.Gem\tools\xunit.runner.console\tools\xunit.runner.utility.desktop.dll</ModulePath>
+      <ModuleTime>2015-09-27T09:34:28Z</ModuleTime>
+      <ModuleName>xunit.runner.utility.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9E-A9-5D-7F-86-82-4D-02-7D-07-AD-C0-17-06-5D-73-8F-1F-28-44">
+      <ModulePath>C:\github\gep13\Cake.Gem\tools\xunit.runner.console\tools\xunit.abstractions.dll</ModulePath>
+      <ModuleTime>2015-09-27T09:34:28Z</ModuleTime>
+      <ModuleName>xunit.abstractions</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="31-76-6A-81-5B-45-2B-B2-02-8C-E4-69-D2-C3-8F-87-B1-54-25-E8">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</ModulePath>
+      <ModuleTime>2015-11-30T20:16:15.7967964Z</ModuleTime>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="AA-84-EA-4A-FD-23-17-44-E5-3B-73-2A-3D-B6-0E-17-EE-E1-53-6A">
+      <ModulePath>C:\github\gep13\Cake.Gem\tools\xunit.runner.console\tools\xunit.runner.reporters.desktop.dll</ModulePath>
+      <ModuleTime>2015-09-27T09:34:28Z</ModuleTime>
+      <ModuleName>xunit.runner.reporters.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="89-DD-2A-3B-C0-B4-7D-15-D9-76-B9-27-55-4B-FA-41-13-70-B3-D7">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Net.Http\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Net.Http.dll</ModulePath>
+      <ModuleTime>2015-11-30T20:16:11.5505176Z</ModuleTime>
+      <ModuleName>System.Net.Http</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="10-12-A2-C6-A0-B8-51-63-D1-3A-89-CF-6B-26-F7-7D-C2-69-68-B0">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</ModulePath>
+      <ModuleTime>2016-02-26T03:21:48Z</ModuleTime>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="88-6A-6B-01-45-41-56-CA-F4-B7-2E-E0-B2-25-8A-C5-B1-89-47-7F">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll</ModulePath>
+      <ModuleTime>2016-01-05T00:35:18.1218729Z</ModuleTime>
+      <ModuleName>System.Web</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="DF-4A-DE-40-BE-24-D6-36-12-5C-3E-21-0D-59-5D-93-07-87-C1-6D">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</ModulePath>
+      <ModuleTime>2013-08-10T00:55:49.3051911Z</ModuleTime>
+      <ModuleName>System.Xml.Linq</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="14-44-50-38-34-98-5F-C6-45-8B-50-B5-CF-D7-E1-0A-28-8F-5E-E8">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</ModulePath>
+      <ModuleTime>2015-12-03T03:40:40Z</ModuleTime>
+      <ModuleName>System.Xml</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9C-DB-95-DC-25-D5-38-7E-C2-3A-20-8F-14-5D-A9-56-2A-D7-00-E3">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</ModulePath>
+      <ModuleTime>2015-11-30T20:16:15.9328056Z</ModuleTime>
+      <ModuleName>System.Configuration</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2C-BE-1B-C3-02-35-ED-A0-CC-7C-AB-BA-F1-C5-8D-DE-79-03-01-9A">
+      <ModulePath>C:\Users\gary.park\AppData\Local\Temp\b4d275f1-ba81-43d2-9d18-0a2cb34430cc\b4d275f1-ba81-43d2-9d18-0a2cb34430cc\assembly\dl3\91738250\00aa5fb4_07f9d001\xunit.runner.utility.desktop.dll</ModulePath>
+      <ModuleTime>2016-08-14T21:01:25.7259614Z</ModuleTime>
+      <ModuleName>xunit.runner.utility.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="31-76-6A-81-5B-45-2B-B2-02-8C-E4-69-D2-C3-8F-87-B1-54-25-E8">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</ModulePath>
+      <ModuleTime>2015-11-30T20:16:15.7967964Z</ModuleTime>
+      <ModuleName>System.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="10-12-A2-C6-A0-B8-51-63-D1-3A-89-CF-6B-26-F7-7D-C2-69-68-B0">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</ModulePath>
+      <ModuleTime>2016-02-26T03:21:48Z</ModuleTime>
+      <ModuleName>System</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="MissingPdb" hash="">
+      <ModulePath>RefEmit_InMemoryManifestModule</ModulePath>
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>Anonymously Hosted DynamicMethods Assembly</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2D-CB-FC-34-F8-D2-A9-5A-02-42-53-AA-00-1F-72-D8-30-DE-11-C1">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\Cake.Gem.Tests.dll</ModulePath>
+      <ModuleTime>2016-08-14T21:01:18.6295507Z</ModuleTime>
+      <ModuleName>Cake.Gem.Tests</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9B-79-31-3B-3B-26-1F-B9-05-41-D7-D9-7D-39-16-F6-6F-4F-81-7D">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\Cake.Testing.dll</ModulePath>
+      <ModuleTime>2016-07-29T19:00:36Z</ModuleTime>
+      <ModuleName>Cake.Testing</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="3B-A3-F9-34-51-48-E5-F6-6D-D6-15-50-37-A9-BB-9E-AA-95-89-A4">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\Cake.Core.dll</ModulePath>
+      <ModuleTime>2016-07-29T19:00:34Z</ModuleTime>
+      <ModuleName>Cake.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module hash="7F-06-B2-5D-92-96-52-0B-B8-06-F0-1F-97-A7-20-8C-B8-9E-C0-B5">
+      <Summary numSequencePoints="62" visitedSequencePoints="56" numBranchPoints="42" visitedBranchPoints="39" sequenceCoverage="90.32" branchCoverage="92.86" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="6" numClasses="7" visitedMethods="23" numMethods="26" />
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\Cake.Gem.dll</ModulePath>
+      <ModuleTime>2016-08-14T20:59:04.0944476Z</ModuleTime>
+      <ModuleName>Cake.Gem</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:\github\gep13\Cake.Gem\Source\Cake.Gem\GemAliases.cs" />
+        <File uid="2" fullPath="C:\github\gep13\Cake.Gem\Source\Cake.Gem\GemArgumentBuilder.cs" />
+        <File uid="3" fullPath="C:\github\gep13\Cake.Gem\Source\Cake.Gem\GemSettings.cs" />
+        <File uid="4" fullPath="C:\github\gep13\Cake.Gem\Source\Cake.Gem\GemTool.cs" />
+        <File uid="5" fullPath="C:\github\gep13\Cake.Gem\Source\Cake.Gem\Build\GemBuildArgumentBuilder.cs" />
+        <File uid="6" fullPath="C:\github\gep13\Cake.Gem\Source\Cake.Gem\Build\GemBuildRunner.cs" />
+        <File uid="7" fullPath="C:\github\gep13\Cake.Gem\Source\Cake.Gem\Build\GemBuildSettings.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+          <FullName>&lt;Module&gt;</FullName>
+          <Methods />
+        </Class>
+        <Class>
+          <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="1" visitedMethods="0" numMethods="2" />
+          <FullName>Cake.Gem.GemAliases</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Void Cake.Gem.GemAliases::GemBuild(Cake.Core.ICakeContext,Cake.Core.IO.FilePath)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="1" ordinal="0" offset="0" sl="27" sc="13" el="27" ec="72" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="2" ordinal="1" offset="12" sl="28" sc="9" el="28" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="1" ordinal="0" offset="0" sl="27" sc="13" el="27" ec="72" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Void Cake.Gem.GemAliases::GemBuild(Cake.Core.ICakeContext,Cake.Core.IO.FilePath,Cake.Gem.Build.GemBuildSettings)</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="3" ordinal="0" offset="0" sl="47" sc="13" el="47" ec="124" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="4" ordinal="1" offset="29" sl="48" sc="13" el="48" ec="53" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="0" uspid="5" ordinal="2" offset="36" sl="49" sc="9" el="49" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="3" ordinal="0" offset="0" sl="47" sc="13" el="47" ec="124" bec="0" bev="0" fileid="1" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="21" visitedSequencePoints="20" numBranchPoints="14" visitedBranchPoints="13" sequenceCoverage="95.24" branchCoverage="92.86" maxCyclomaticComplexity="6" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="3" numMethods="4" />
+          <FullName>Cake.Gem.GemArgumentBuilder`1</FullName>
+          <Methods>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+              <MetadataToken>100663300</MetadataToken>
+              <Name>Cake.Core.ICakeEnvironment Cake.Gem.GemArgumentBuilder`1::get_Environment()</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="6" ordinal="0" offset="0" sl="33" sc="51" el="33" ec="63" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="6" ordinal="0" offset="0" sl="33" sc="51" el="33" ec="63" bec="0" bev="0" fileid="2" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663299</MetadataToken>
+              <Name>System.Void Cake.Gem.GemArgumentBuilder`1::.ctor(Cake.Core.ICakeEnvironment,T)</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="7" ordinal="0" offset="0" sl="23" sc="9" el="23" ec="78" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="8" ordinal="1" offset="6" sl="25" sc="13" el="25" ec="40" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="9" ordinal="2" offset="13" sl="26" sc="13" el="26" ec="33" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="10" ordinal="3" offset="20" sl="27" sc="13" el="27" ec="53" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="11" ordinal="4" offset="31" sl="28" sc="9" el="28" ec="10" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="7" ordinal="0" offset="0" sl="23" sc="9" el="23" ec="78" bec="0" bev="0" fileid="2" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663301</MetadataToken>
+              <Name>Cake.Core.IO.ProcessArgumentBuilder Cake.Gem.GemArgumentBuilder`1::GetArguments()</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="12" ordinal="0" offset="0" sl="41" sc="13" el="41" ec="47" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="13" ordinal="1" offset="18" sl="42" sc="13" el="42" ec="34" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="14" ordinal="2" offset="24" sl="43" sc="13" el="43" ec="29" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="12" ordinal="0" offset="0" sl="41" sc="13" el="41" ec="47" bec="0" bev="0" fileid="2" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="6" nPathComplexity="32" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="12" visitedSequencePoints="12" numBranchPoints="11" visitedBranchPoints="11" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="6" minCyclomaticComplexity="6" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Void Cake.Gem.GemArgumentBuilder`1::AddCommonArguments()</Name>
+              <FileRef uid="2" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="15" ordinal="0" offset="0" sl="55" sc="13" el="55" ec="35" bec="2" bev="2" fileid="2" />
+                <SequencePoint vc="1" uspid="16" ordinal="1" offset="18" sl="57" sc="17" el="57" ec="39" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="17" ordinal="2" offset="35" sl="60" sc="13" el="60" ec="33" bec="2" bev="2" fileid="2" />
+                <SequencePoint vc="1" uspid="18" ordinal="3" offset="53" sl="62" sc="17" el="62" ec="39" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="19" ordinal="4" offset="70" sl="65" sc="13" el="65" ec="50" bec="2" bev="2" fileid="2" />
+                <SequencePoint vc="1" uspid="20" ordinal="5" offset="88" sl="67" sc="17" el="67" ec="50" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="1" uspid="21" ordinal="6" offset="105" sl="68" sc="17" el="68" ec="101" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="22" ordinal="7" offset="149" sl="71" sc="13" el="71" ec="37" bec="2" bev="2" fileid="2" />
+                <SequencePoint vc="1" uspid="23" ordinal="8" offset="167" sl="73" sc="17" el="73" ec="48" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="24" ordinal="9" offset="184" sl="76" sc="13" el="76" ec="33" bec="2" bev="2" fileid="2" />
+                <SequencePoint vc="1" uspid="25" ordinal="10" offset="202" sl="78" sc="17" el="78" ec="44" bec="0" bev="0" fileid="2" />
+                <SequencePoint vc="12" uspid="26" ordinal="11" offset="219" sl="80" sc="9" el="80" ec="10" bec="0" bev="0" fileid="2" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="27" ordinal="0" offset="16" sl="55" path="0" offsetend="18" fileid="2" />
+                <BranchPoint vc="11" uspid="28" ordinal="1" offset="16" sl="55" path="1" offsetend="35" fileid="2" />
+                <BranchPoint vc="1" uspid="29" ordinal="2" offset="51" sl="60" path="0" offsetend="53" fileid="2" />
+                <BranchPoint vc="11" uspid="30" ordinal="3" offset="51" sl="60" path="1" offsetend="70" fileid="2" />
+                <BranchPoint vc="1" uspid="31" ordinal="4" offset="86" sl="65" path="0" offsetend="88" fileid="2" />
+                <BranchPoint vc="11" uspid="32" ordinal="5" offset="86" sl="65" path="1" offsetend="149" fileid="2" />
+                <BranchPoint vc="1" uspid="33" ordinal="6" offset="165" sl="71" path="0" offsetend="167" fileid="2" />
+                <BranchPoint vc="11" uspid="34" ordinal="7" offset="165" sl="71" path="1" offsetend="184" fileid="2" />
+                <BranchPoint vc="1" uspid="35" ordinal="8" offset="200" sl="76" path="0" offsetend="202" fileid="2" />
+                <BranchPoint vc="11" uspid="36" ordinal="9" offset="200" sl="76" path="1" offsetend="219" fileid="2" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="15" ordinal="0" offset="0" sl="55" sc="13" el="55" ec="35" bec="2" bev="2" fileid="2" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="10" visitedSequencePoints="10" numBranchPoints="10" visitedBranchPoints="10" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="10" numMethods="10" />
+          <FullName>Cake.Gem.GemSettings</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663304</MetadataToken>
+              <Name>System.Boolean Cake.Gem.GemSettings::get_Verbose()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="37" ordinal="0" offset="0" sl="14" sc="31" el="14" ec="35" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="37" ordinal="0" offset="0" sl="14" sc="31" el="14" ec="35" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663305</MetadataToken>
+              <Name>System.Void Cake.Gem.GemSettings::set_Verbose(System.Boolean)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="38" ordinal="0" offset="0" sl="14" sc="36" el="14" ec="40" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="38" ordinal="0" offset="0" sl="14" sc="36" el="14" ec="40" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663306</MetadataToken>
+              <Name>System.Boolean Cake.Gem.GemSettings::get_Quiet()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="39" ordinal="0" offset="0" sl="19" sc="29" el="19" ec="33" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="39" ordinal="0" offset="0" sl="19" sc="29" el="19" ec="33" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663307</MetadataToken>
+              <Name>System.Void Cake.Gem.GemSettings::set_Quiet(System.Boolean)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="40" ordinal="0" offset="0" sl="19" sc="34" el="19" ec="38" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="40" ordinal="0" offset="0" sl="19" sc="34" el="19" ec="38" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663308</MetadataToken>
+              <Name>Cake.Core.IO.FilePath Cake.Gem.GemSettings::get_ConfigFilePath()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="13" uspid="41" ordinal="0" offset="0" sl="24" sc="42" el="24" ec="46" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="13" uspid="41" ordinal="0" offset="0" sl="24" sc="42" el="24" ec="46" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663309</MetadataToken>
+              <Name>System.Void Cake.Gem.GemSettings::set_ConfigFilePath(Cake.Core.IO.FilePath)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="42" ordinal="0" offset="0" sl="24" sc="47" el="24" ec="51" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="42" ordinal="0" offset="0" sl="24" sc="47" el="24" ec="51" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663310</MetadataToken>
+              <Name>System.Boolean Cake.Gem.GemSettings::get_Backtrace()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="43" ordinal="0" offset="0" sl="29" sc="33" el="29" ec="37" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="43" ordinal="0" offset="0" sl="29" sc="33" el="29" ec="37" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663311</MetadataToken>
+              <Name>System.Void Cake.Gem.GemSettings::set_Backtrace(System.Boolean)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="44" ordinal="0" offset="0" sl="29" sc="38" el="29" ec="42" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="44" ordinal="0" offset="0" sl="29" sc="38" el="29" ec="42" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663312</MetadataToken>
+              <Name>System.Boolean Cake.Gem.GemSettings::get_Debug()</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="45" ordinal="0" offset="0" sl="34" sc="29" el="34" ec="33" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="45" ordinal="0" offset="0" sl="34" sc="29" el="34" ec="33" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663313</MetadataToken>
+              <Name>System.Void Cake.Gem.GemSettings::set_Debug(System.Boolean)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="46" ordinal="0" offset="0" sl="34" sc="34" el="34" ec="38" bec="0" bev="0" fileid="3" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="46" ordinal="0" offset="0" sl="34" sc="34" el="34" ec="38" bec="0" bev="0" fileid="3" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663314</MetadataToken>
+              <Name>System.Void Cake.Gem.GemSettings::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="14" uspid="47" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="4" visitedBranchPoints="4" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
+          <FullName>Cake.Gem.GemTool`1</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="2" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663315</MetadataToken>
+              <Name>System.Void Cake.Gem.GemTool`1::.ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator)</Name>
+              <FileRef uid="4" />
+              <SequencePoints>
+                <SequencePoint vc="14" uspid="48" ordinal="0" offset="0" sl="27" sc="15" el="27" ec="66" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="14" uspid="49" ordinal="1" offset="11" sl="29" sc="9" el="29" ec="10" bec="0" bev="0" fileid="4" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="14" uspid="48" ordinal="0" offset="0" sl="27" sc="15" el="27" ec="66" bec="0" bev="0" fileid="4" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663316</MetadataToken>
+              <Name>System.String Cake.Gem.GemTool`1::GetToolName()</Name>
+              <FileRef uid="4" />
+              <SequencePoints>
+                <SequencePoint vc="13" uspid="50" ordinal="0" offset="0" sl="37" sc="13" el="37" ec="26" bec="0" bev="0" fileid="4" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="13" uspid="50" ordinal="0" offset="0" sl="37" sc="13" el="37" ec="26" bec="0" bev="0" fileid="4" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663317</MetadataToken>
+              <Name>System.Collections.Generic.IEnumerable`1&lt;System.String&gt; Cake.Gem.GemTool`1::GetToolExecutableNames()</Name>
+              <FileRef uid="4" />
+              <SequencePoints>
+                <SequencePoint vc="10" uspid="51" ordinal="0" offset="0" sl="46" sc="13" el="46" ec="47" bec="0" bev="0" fileid="4" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="10" uspid="51" ordinal="0" offset="0" sl="46" sc="13" el="46" ec="47" bec="0" bev="0" fileid="4" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="2" visitedSequencePoints="2" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663318</MetadataToken>
+              <Name>System.Void Cake.Gem.GemTool`1::RunGem(TSettings,TBuilder)</Name>
+              <FileRef uid="4" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="52" ordinal="0" offset="0" sl="58" sc="13" el="58" ec="51" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="9" uspid="53" ordinal="1" offset="18" sl="59" sc="9" el="59" ec="10" bec="0" bev="0" fileid="4" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="52" ordinal="0" offset="0" sl="58" sc="13" el="58" ec="51" bec="0" bev="0" fileid="4" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="9" visitedSequencePoints="9" numBranchPoints="4" visitedBranchPoints="4" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
+          <FullName>Cake.Gem.Build.GemBuildArgumentBuilder</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663319</MetadataToken>
+              <Name>System.Void Cake.Gem.Build.GemBuildArgumentBuilder::.ctor(Cake.Core.ICakeEnvironment,Cake.Core.IO.FilePath,Cake.Gem.Build.GemBuildSettings)</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="54" ordinal="0" offset="0" sl="21" sc="15" el="21" ec="42" bec="0" bev="0" fileid="5" />
+                <SequencePoint vc="12" uspid="55" ordinal="1" offset="8" sl="23" sc="13" el="23" ec="40" bec="0" bev="0" fileid="5" />
+                <SequencePoint vc="12" uspid="56" ordinal="2" offset="15" sl="24" sc="13" el="24" ec="48" bec="0" bev="0" fileid="5" />
+                <SequencePoint vc="12" uspid="57" ordinal="3" offset="22" sl="25" sc="9" el="25" ec="10" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="54" ordinal="0" offset="0" sl="21" sc="15" el="21" ec="42" bec="0" bev="0" fileid="5" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663320</MetadataToken>
+              <Name>System.Void Cake.Gem.Build.GemBuildArgumentBuilder::AddArguments(Cake.Core.IO.ProcessArgumentBuilder,Cake.Gem.Build.GemBuildSettings)</Name>
+              <FileRef uid="5" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="58" ordinal="0" offset="0" sl="34" sc="13" el="34" ec="37" bec="0" bev="0" fileid="5" />
+                <SequencePoint vc="12" uspid="59" ordinal="1" offset="12" sl="36" sc="13" el="36" ec="88" bec="0" bev="0" fileid="5" />
+                <SequencePoint vc="12" uspid="60" ordinal="2" offset="41" sl="38" sc="13" el="38" ec="32" bec="2" bev="2" fileid="5" />
+                <SequencePoint vc="1" uspid="61" ordinal="3" offset="49" sl="40" sc="17" el="40" ec="43" bec="0" bev="0" fileid="5" />
+                <SequencePoint vc="12" uspid="62" ordinal="4" offset="61" sl="42" sc="9" el="42" ec="10" bec="0" bev="0" fileid="5" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="63" ordinal="0" offset="47" sl="38" path="0" offsetend="49" fileid="5" />
+                <BranchPoint vc="11" uspid="64" ordinal="1" offset="47" sl="38" path="1" offsetend="61" fileid="5" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="58" ordinal="0" offset="0" sl="34" sc="13" el="34" ec="37" bec="0" bev="0" fileid="5" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="9" visitedSequencePoints="9" numBranchPoints="6" visitedBranchPoints="6" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
+          <FullName>Cake.Gem.Build.GemBuildRunner</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663321</MetadataToken>
+              <Name>System.Void Cake.Gem.Build.GemBuildRunner::.ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator)</Name>
+              <FileRef uid="6" />
+              <SequencePoints>
+                <SequencePoint vc="14" uspid="65" ordinal="0" offset="0" sl="27" sc="15" el="27" ec="66" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="14" uspid="66" ordinal="1" offset="11" sl="29" sc="13" el="29" ec="40" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="14" uspid="67" ordinal="2" offset="18" sl="30" sc="9" el="30" ec="10" bec="0" bev="0" fileid="6" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="14" uspid="65" ordinal="0" offset="0" sl="27" sc="15" el="27" ec="66" bec="0" bev="0" fileid="6" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="3" nPathComplexity="4" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="5" visitedBranchPoints="5" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663322</MetadataToken>
+              <Name>System.Void Cake.Gem.Build.GemBuildRunner::Build(Cake.Core.IO.FilePath,Cake.Gem.Build.GemBuildSettings)</Name>
+              <FileRef uid="6" />
+              <SequencePoints>
+                <SequencePoint vc="14" uspid="68" ordinal="0" offset="0" sl="39" sc="13" el="39" ec="41" bec="2" bev="2" fileid="6" />
+                <SequencePoint vc="1" uspid="69" ordinal="1" offset="3" sl="41" sc="17" el="41" ec="74" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="13" uspid="70" ordinal="2" offset="14" sl="44" sc="13" el="44" ec="34" bec="2" bev="2" fileid="6" />
+                <SequencePoint vc="1" uspid="71" ordinal="3" offset="17" sl="46" sc="17" el="46" ec="67" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="12" uspid="72" ordinal="4" offset="28" sl="49" sc="13" el="49" ec="100" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="9" uspid="73" ordinal="5" offset="48" sl="50" sc="9" el="50" ec="10" bec="0" bev="0" fileid="6" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="74" ordinal="0" offset="1" sl="39" path="0" offsetend="3" fileid="6" />
+                <BranchPoint vc="13" uspid="75" ordinal="1" offset="1" sl="39" path="1" offsetend="14" fileid="6" />
+                <BranchPoint vc="1" uspid="76" ordinal="2" offset="15" sl="44" path="0" offsetend="17" fileid="6" />
+                <BranchPoint vc="12" uspid="77" ordinal="3" offset="15" sl="44" path="1" offsetend="28" fileid="6" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="14" uspid="68" ordinal="0" offset="0" sl="39" sc="13" el="39" ec="41" bec="2" bev="2" fileid="6" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="2" visitedSequencePoints="2" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="1" numClasses="1" visitedMethods="2" numMethods="2" />
+          <FullName>Cake.Gem.Build.GemBuildSettings</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663323</MetadataToken>
+              <Name>System.Boolean Cake.Gem.Build.GemBuildSettings::get_Force()</Name>
+              <FileRef uid="7" />
+              <SequencePoints>
+                <SequencePoint vc="12" uspid="78" ordinal="0" offset="0" sl="14" sc="29" el="14" ec="33" bec="0" bev="0" fileid="7" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="12" uspid="78" ordinal="0" offset="0" sl="14" sc="29" el="14" ec="33" bec="0" bev="0" fileid="7" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663324</MetadataToken>
+              <Name>System.Void Cake.Gem.Build.GemBuildSettings::set_Force(System.Boolean)</Name>
+              <FileRef uid="7" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="79" ordinal="0" offset="0" sl="14" sc="34" el="14" ec="38" bec="0" bev="0" fileid="7" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="79" ordinal="0" offset="0" sl="14" sc="34" el="14" ec="38" bec="0" bev="0" fileid="7" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663325</MetadataToken>
+              <Name>System.Void Cake.Gem.Build.GemBuildSettings::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="14" uspid="80" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module skippedDueTo="Filter" hash="51-60-07-3A-41-C0-01-C6-0C-80-56-7D-83-63-89-31-36-5F-A9-FE">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\xunit.execution.desktop.dll</ModulePath>
+      <ModuleTime>2015-12-01T08:26:36.0587165Z</ModuleTime>
+      <ModuleName>xunit.execution.desktop</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="2D-CB-FC-34-F8-D2-A9-5A-02-42-53-AA-00-1F-72-D8-30-DE-11-C1">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\Cake.Gem.Tests.dll</ModulePath>
+      <ModuleTime>2016-08-14T21:01:18.6295507Z</ModuleTime>
+      <ModuleName>Cake.Gem.Tests</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9F-06-B1-CA-CB-A0-C1-4D-45-F5-AA-8F-72-C0-DF-0F-F4-EF-29-CF">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\xunit.core.dll</ModulePath>
+      <ModuleTime>2015-12-01T08:26:34.4435203Z</ModuleTime>
+      <ModuleName>xunit.core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="0F-9F-A3-39-21-7F-A6-A8-62-42-36-5D-39-6A-E3-44-A3-53-08-C2">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.dll</ModulePath>
+      <ModuleTime>2015-11-30T20:16:10.5004483Z</ModuleTime>
+      <ModuleName>System.Runtime</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="27-0A-97-DD-A0-B2-35-29-E2-FC-54-09-5F-DD-E0-F6-7A-D7-02-7D">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Threading.Tasks\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Threading.Tasks.dll</ModulePath>
+      <ModuleTime>2013-08-10T00:55:31.3034258Z</ModuleTime>
+      <ModuleName>System.Threading.Tasks</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="E5-47-DF-DB-F9-44-F7-01-45-88-53-04-81-38-D1-35-A9-F1-C7-BC">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Collections\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Collections.dll</ModulePath>
+      <ModuleTime>2015-11-30T20:16:16.2408257Z</ModuleTime>
+      <ModuleName>System.Collections</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="9B-79-31-3B-3B-26-1F-B9-05-41-D7-D9-7D-39-16-F6-6F-4F-81-7D">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\Cake.Testing.dll</ModulePath>
+      <ModuleTime>2016-07-29T19:00:36Z</ModuleTime>
+      <ModuleName>Cake.Testing</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="3B-A3-F9-34-51-48-E5-F6-6D-D6-15-50-37-A9-BB-9E-AA-95-89-A4">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\Cake.Core.dll</ModulePath>
+      <ModuleTime>2016-07-29T19:00:34Z</ModuleTime>
+      <ModuleName>Cake.Core</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="07-45-D5-E5-64-A5-50-1F-70-A0-AC-85-75-89-96-B5-69-A5-81-0F">
+      <ModulePath>C:\github\gep13\Cake.Gem\BuildArtifacts\temp\_PublishedxUnitTests\Cake.Gem.Tests\xunit.assert.dll</ModulePath>
+      <ModuleTime>2015-12-01T08:26:34.7925533Z</ModuleTime>
+      <ModuleName>xunit.assert</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="EC-FF-9D-4B-0C-AE-7A-3C-63-A6-9E-91-68-0A-BA-A4-D2-4E-03-EE">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Reflection\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Reflection.dll</ModulePath>
+      <ModuleTime>2013-08-10T00:55:16.7082446Z</ModuleTime>
+      <ModuleName>System.Reflection</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="4C-89-BF-38-16-4E-9D-79-E6-3D-4C-DF-BA-B7-64-7C-0A-41-01-99">
+      <ModulePath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Linq\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Linq.dll</ModulePath>
+      <ModuleTime>2013-08-10T00:55:16.5363528Z</ModuleTime>
+      <ModuleName>System.Linq</ModuleName>
+      <Classes />
+    </Module>
+  </Modules>
+</CoverageSession>

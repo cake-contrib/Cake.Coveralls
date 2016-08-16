@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoverallsAliases.cs" />
+    <Compile Include="CoverallsIoRunner.cs" />
+    <Compile Include="CoverallsIoSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
