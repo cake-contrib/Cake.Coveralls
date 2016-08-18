@@ -17,7 +17,7 @@ This will instruct Cake to download the package from NuGet and install it into t
 In addition, you will need to include the following:
 
 ```csharp
-#addin Cake.Twitter
+#addin Cake.Coveralls
 ```
 
 This will instruct Cake to download the [Cake.Coveralls](https://www.nuget.org/packages/Cake.Coveralls/) package from NuGet and install it into the Cake Addin's folder, and from there, load the associated assembly in the execution context for consumption within your script.
