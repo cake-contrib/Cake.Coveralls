@@ -16,7 +16,7 @@ Cake.Coveralls is an Addin for [Cake](http://cakebuild.net/) with ability to pus
 
 |Develop|Master|
 |:--:|:--:|
-|[![Build status](https://ci.appveyor.com/api/projects/status/n4mip8e484umq8p4/branch/develop?svg=true)](https://ci.appveyor.com/project/GaryEwanPark/cake-coveralls/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/n4mip8e484umq8p4/branch/develop?svg=true)](https://ci.appveyor.com/project/GaryEwanPark/cake-coveralls/branch/master)|
+|[![Build status](https://ci.appveyor.com/api/projects/status/ouco0cdvt2hdmklb/branch/develop?svg=true)](https://ci.appveyor.com/project/GaryEwanPark/cake-coveralls/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/ouco0cdvt2hdmklb/branch/develop?svg=true)](https://ci.appveyor.com/project/GaryEwanPark/cake-coveralls/branch/master)|
 
 ## Quick Links
 
