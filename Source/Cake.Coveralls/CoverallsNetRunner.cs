@@ -65,6 +65,21 @@ namespace Cake.Coveralls
             return new[] { "csmacnz.coveralls.exe" };
         }
 
+        private static string GetReportType(CoverallsNetReportType reportType)
+        {
+            switch (reportType)
+            {
+                case CoverallsNetReportType.OpenCover:
+                    return "--opencover";
+                case CoverallsNetReportType.DynamicCodeCoverage:
+                    return "--dynamiccodecoverage";
+                case CoverallsNetReportType.Monocov:
+                    return "--monocov";
+                default:
+                    throw new NotSupportedException("The provided output is not valid.");
+            }
+        }
+
         private ProcessArgumentBuilder GetArguments(FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings)
         {
             var builder = new ProcessArgumentBuilder();
@@ -144,27 +159,12 @@ namespace Cake.Coveralls
                 builder.AppendQuoted(settings.ServiceName);
             }
 
-            if(settings.TreatUploadErrorsAsWarnings)
+            if (settings.TreatUploadErrorsAsWarnings)
             {
                 builder.Append("--treatUploadErrorsAsWarnings");
             }
 
             return builder;
-        }
-
-        private static string GetReportType(CoverallsNetReportType reportType)
-        {
-            switch (reportType)
-            {
-                case CoverallsNetReportType.OpenCover:
-                    return "--opencover";
-                case CoverallsNetReportType.DynamicCodeCoverage:
-                    return "--dynamiccodecoverage";
-                case CoverallsNetReportType.Monocov:
-                    return "--monocov";
-                default:
-                    throw new NotSupportedException("The provided output is not valid.");
-            }
         }
     }
 }
