@@ -36,7 +36,7 @@ var solutionFilePath          = "./Source/Cake.Coveralls.sln";
 var solutionDirectoryPath     = "./Source/Cake.Coveralls";
 var title                     = "Cake.Coveralls";
 var resharperSettingsFileName = "Cake.Coveralls.sln.DotSettings";
-var repositoryOwner           = "gep13";
+var repositoryOwner           = "cake-build";
 var repositoryName            = "Cake.Coveralls";
 
 // NOTE: Only populate this, if required, but leave as is otherwise.
