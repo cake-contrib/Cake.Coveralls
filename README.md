@@ -26,4 +26,4 @@ Cake.Coveralls is an Addin for [Cake](http://cakebuild.net/) with ability to pus
 ## Chat Room
 Come join in the conversation about Cake.Coveralls in our Gitter Chat Room
 
-[![Join the chat at https://gitter.im/gep13/Cake.Coveralls](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gep13/Cake.Coveralls?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
