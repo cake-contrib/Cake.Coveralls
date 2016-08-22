@@ -18,6 +18,10 @@ Cake.Coveralls is an Addin for [Cake](http://cakebuild.net/) with ability to pus
 |:--:|:--:|
 |[![Build status](https://ci.appveyor.com/api/projects/status/y19f0qk1uupbc8dm/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-coveralls/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/y19f0qk1uupbc8dm/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-coveralls/branch/master)|
 
+## Code Coverage
+
+[![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.Coveralls/badge.svg?branch=develop)](https://coveralls.io/github/cake-contrib/Cake.Coveralls?branch=develop)
+
 ## Quick Links
 
 - [Documentation](http://cakecoveralls.readthedocs.org/en/develop/)
