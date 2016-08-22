@@ -5,9 +5,6 @@ using Cake.Core.IO;
 namespace Cake.Coveralls
 {
     /// <summary>
-    /// Contains aliases related to Coveralls.io
-    /// </summary>
-    /// <summary>
     /// <para>Contains aliases related to <see href="https://coveralls.io/">Coveralls.io</see>.</para>
     /// <para>
     /// In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
