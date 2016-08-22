@@ -41,7 +41,7 @@ Task("Upload-Coverage-Report")
 Task("Upload-Coverage-Report")
     .Does(() =>
 {
-    CoverallsIo("coverage.xml", CoverallsNetReportType.OpenCover);
+    CoverallsNet("coverage.xml", CoverallsNetReportType.OpenCover);
 });
 ```
 
