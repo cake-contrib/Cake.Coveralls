@@ -3,7 +3,7 @@
 # This file was downloaded from https://github.com/cake-build/resources
 # Feel free to change this file to fit your needs.
 ##########################################################################
-
+# Comment to force flushing of AppVeyor cache.
 <#
 
 .SYNOPSIS
