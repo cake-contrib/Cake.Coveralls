@@ -9,7 +9,7 @@ In order to use the commands for this addin, you will need to include either of 
 ```
 
 ```csharp
-#tools coveralls.io
+#tool coveralls.io
 ```
 
 This will instruct Cake to download the package from NuGet and install it into the Cake Tool's folder, and from there, the executable will be available to your script.

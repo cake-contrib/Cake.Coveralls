@@ -9,7 +9,7 @@ Within your build script, you will need to add the following (normally near the 
 and either one of the following:
 
 ```csharp
-#tools coveralls.net
+#tool coveralls.net
 ```
 
 ```csharp
