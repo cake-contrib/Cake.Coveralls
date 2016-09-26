@@ -1,6 +1,6 @@
 site_name: Cake.Coveralls
 theme: readthedocs
-repo_url: https://github.com/gep13/Cake.Coveralls
+repo_url: https://github.com/cake-contrib/Cake.Coveralls
 
 pages:
 - Home: index.md
