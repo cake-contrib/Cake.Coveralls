@@ -18,6 +18,8 @@ private static string twitterConsumerKeyVariable = "TWITTER_CONSUMER_KEY";
 private static string twitterConsumerSecretVariable = "TWITTER_CONSUMER_SECRET";
 private static string twitterAccessTokenVariable = "TWITTER_ACCESS_TOKEN";
 private static string twitterAccessTokenSecretVariable = "TWITTER_ACCESS_TOKEN_SECRET";
+private static string appVeyorApiTokenVariable = "APPVEYOR_API_TOKEN";
+private static string coverallsRepoTokenVariable = "COVERALLS_REPO_TOKEN";
 
 ///////////////////////////////////////////////////////////////////////////////
 // BUILD ACTIONS
@@ -33,14 +35,20 @@ var sendMessageToTwitter = true;
 
 var rootDirectoryPath         = MakeAbsolute(Context.Environment.WorkingDirectory);
 var solutionFilePath          = "./Source/Cake.Coveralls.sln";
+var sourceDirectoryPath       = "./Source";
 var solutionDirectoryPath     = "./Source/Cake.Coveralls";
 var title                     = "Cake.Coveralls";
 var resharperSettingsFileName = "Cake.Coveralls.sln.DotSettings";
 var repositoryOwner           = "cake-contrib";
 var repositoryName            = "Cake.Coveralls";
+var appVeyorAccountName       = "cakecontrib";
+var appVeyorProjectSlug       = "cake-coveralls";
 
 // NOTE: Only populate this, if required, but leave as is otherwise.
 var dupFinderExcludePattern   = new string[] { rootDirectoryPath + "/Source/Cake.Coveralls.Tests/*.cs" };
+var testCoverageFilter = "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* ";
+var testCoverageExcludeByAttribute = "*.ExcludeFromCodeCoverage*";
+var testCoverageExcludeByFile = "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs";
 
 ///////////////////////////////////////////////////////////////////////////////
 // CAKE FILES TO LOAD IN
@@ -48,6 +56,7 @@ var dupFinderExcludePattern   = new string[] { rootDirectoryPath + "/Source/Cake
 
 #l .\Tools\gep13.DefaultBuild\Content\appveyor.cake
 #l .\Tools\gep13.DefaultBuild\Content\chocolatey.cake
+#l .\Tools\gep13.DefaultBuild\Content\coveralls.cake
 #l .\Tools\gep13.DefaultBuild\Content\credentials.cake
 #l .\Tools\gep13.DefaultBuild\Content\gitreleasemanager.cake
 #l .\Tools\gep13.DefaultBuild\Content\gitter.cake
