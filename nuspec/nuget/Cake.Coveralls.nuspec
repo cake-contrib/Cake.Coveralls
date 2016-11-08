@@ -10,12 +10,12 @@
     <licenseUrl>https://github.com/cake-contrib/Cake.Coveralls/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/cake-contrib/Cake.Coveralls/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <copyright>Copyright (c) gep13</copyright>
+    <copyright>Copyright (c) Cake Contributions 2016 - Present</copyright>
     <tags>Cake, Script, Build, Coveralls</tags>
   </metadata>
   <files>
-    <file src="Cake.Coveralls.dll" />
-    <file src="Cake.Coveralls.pdb" />
-    <file src="Cake.Coveralls.xml" />
+    <file src="Cake.Coveralls.dll" target="lib\net45" />
+    <file src="Cake.Coveralls.pdb" target="lib\net45" />
+    <file src="Cake.Coveralls.xml" target="lib\net45" />
   </files>
 </package>
