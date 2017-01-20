@@ -252,5 +252,6 @@ paket-files/
 *.sln.iml
 
 # Build related
-tools/
+tools/**
+!tools/packages.config
 BuildArtifacts/
