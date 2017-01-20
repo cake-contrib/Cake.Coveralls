@@ -38,4 +38,4 @@ cache:
 #---------------------------------#
 skip_commits:
   # Regex for matching commit message
-  message: /(doc).*/
+  message: /\(doc\).*/
