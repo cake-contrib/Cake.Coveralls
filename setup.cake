@@ -10,6 +10,8 @@ BuildParameters.SetParameters(context: Context,
                             repositoryName: "Cake.Coveralls",
                             appVeyorAccountName: "cakecontrib");
 
+BuildParameters.PrintParamters(Context);
+
 ToolSettings.SetToolSettings(context: Context,
                             dupFinderExcludePattern: new string[] { 
                                 BuildParameters.RootDirectoryPath + "/Source/Cake.Coveralls.Tests/*.cs" },
