@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<link rel="self" href="http://chocolatey.github.io/" />
+	<id>http://chocolatey.github.io/</id>
+	<title />
+	<rights>2017</rights>
+	<updated>2017-01-22T21:55:03Z</updated>
+	<entry>
+		<author>
+			<name>me</name>
+		</author>
+		<link href="http://chocolatey.github.io/blog/new-release" />
+		<id>http://chocolatey.github.io/blog/new-release</id>
+		<title>New Release</title>
+		<updated>2016-01-01T00:00:00Z</updated>
+		<summary>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;</summary>
+	</entry>
+</feed>
