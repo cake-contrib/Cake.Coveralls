@@ -1,4 +1,5 @@
 System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
-Settings.Host = "chocolatey.github.io";
+Settings.Host = "cake-contrib.github.io";
+Settings.LinkRoot = "Cake.Coveralls";
 GlobalMetadata["BaseEditUrl"] = "https://github.com/chocolatey/ChocolateyGUI/tree/develop/docs/input";
 GlobalMetadata["SourceFiles"] = "Source/**/{!bin,!obj,!packages,!*.Tests,}/**/*.cs";
