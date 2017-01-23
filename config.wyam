@@ -1,5 +1,3 @@
 System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
-Settings.Host = "cake-contrib.github.io";
-Settings.LinkRoot = "Cake.Coveralls";
-GlobalMetadata["BaseEditUrl"] = "https://github.com/cake-contrib/Cake.Coveralls/tree/develop/docs/input";
-GlobalMetadata["SourceFiles"] = "Source/**/{!bin,!obj,!packages,!*.Tests,}/**/*.cs";
+Settings.Host = GlobalMetadata.String("Host");
+Settings.LinkRoot = GlobalMetadata.String("LinkRoot");
