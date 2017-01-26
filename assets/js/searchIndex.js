@@ -34,14 +34,6 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"CoverallsNetReportType",
-        content:"CoverallsNetReportType",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
         title:"CoverallsIoSettings",
         content:"CoverallsIoSettings",
         description:'',
@@ -49,9 +41,17 @@ var searchModule = function() {
     });
 
     a({
-        id:2,
+        id:1,
         title:"CoverallsIoRunner",
         content:"CoverallsIoRunner",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:2,
+        title:"CoverallsNetReportType",
+        content:"CoverallsNetReportType",
         description:'',
         tags:''
     });
@@ -66,24 +66,18 @@ var searchModule = function() {
 
     a({
         id:4,
-        title:"CoverallsAliases",
-        content:"CoverallsAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:5,
         title:"CoverallsNetRunner",
         content:"CoverallsNetRunner",
         description:'',
         tags:''
     });
 
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
-        title:"CoverallsNetReportType",
-        description:""
+    a({
+        id:5,
+        title:"CoverallsAliases",
+        content:"CoverallsAliases",
+        description:'',
+        tags:''
     });
 
     y({
@@ -99,20 +93,26 @@ var searchModule = function() {
     });
 
     y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
+        title:"CoverallsNetReportType",
+        description:""
+    });
+
+    y({
         url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetSettings',
         title:"CoverallsNetSettings",
         description:""
     });
 
     y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
-        title:"CoverallsAliases",
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
+        title:"CoverallsNetRunner",
         description:""
     });
 
     y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
-        title:"CoverallsNetRunner",
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
+        title:"CoverallsAliases",
         description:""
     });
 
