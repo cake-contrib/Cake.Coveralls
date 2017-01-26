@@ -42,30 +42,6 @@ var searchModule = function() {
 
     a({
         id:1,
-        title:"CoverallsNetSettings",
-        content:"CoverallsNetSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
-        title:"CoverallsNetRunner",
-        content:"CoverallsNetRunner",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:3,
-        title:"CoverallsAliases",
-        content:"CoverallsAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:4,
         title:"CoverallsIoSettings",
         content:"CoverallsIoSettings",
         description:'',
@@ -73,9 +49,33 @@ var searchModule = function() {
     });
 
     a({
-        id:5,
+        id:2,
         title:"CoverallsIoRunner",
         content:"CoverallsIoRunner",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:3,
+        title:"CoverallsNetSettings",
+        content:"CoverallsNetSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:4,
+        title:"CoverallsAliases",
+        content:"CoverallsAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:5,
+        title:"CoverallsNetRunner",
+        content:"CoverallsNetRunner",
         description:'',
         tags:''
     });
@@ -83,24 +83,6 @@ var searchModule = function() {
     y({
         url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
         title:"CoverallsNetReportType",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetSettings',
-        title:"CoverallsNetSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
-        title:"CoverallsNetRunner",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
-        title:"CoverallsAliases",
         description:""
     });
 
@@ -113,6 +95,24 @@ var searchModule = function() {
     y({
         url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
         title:"CoverallsIoRunner",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetSettings',
+        title:"CoverallsNetSettings",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
+        title:"CoverallsAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
+        title:"CoverallsNetRunner",
         description:""
     });
 
