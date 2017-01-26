@@ -8,7 +8,6 @@ Cake.Coveralls is an Addin for [Cake](http://cakebuild.net/) with ability to pus
 
 ||Stable|Pre-release|
 |:--:|:--:|:--:|
-|Docs|[![Documentation Status](https://readthedocs.org/projects/cakecoveralls/badge/?version=stable)](http://cakecoveralls.readthedocs.org/en/stable/)|[![Documentation Status](https://readthedocs.org/projects/cakecoveralls/badge/?version=develop)](http://cakecoveralls.readthedocs.org/en/develop/)|
 |GitHub Release|-|[![GitHub release](https://img.shields.io/github/release/cake-contrib/Cake.Coveralls.svg)](https://github.com/cake-contrib/Cake.Coveralls/releases/latest)|
 |NuGet|[![NuGet](https://img.shields.io/nuget/v/Cake.Coveralls.svg)](https://www.nuget.org/packages/Cake.Coveralls)|[![NuGet](https://img.shields.io/nuget/vpre/Cake.Coveralls.svg)](https://www.nuget.org/packages/Cake.Coveralls)|
 
@@ -24,8 +23,7 @@ Cake.Coveralls is an Addin for [Cake](http://cakebuild.net/) with ability to pus
 
 ## Quick Links
 
-- [Documentation](http://cakecoveralls.readthedocs.org/en/develop/)
-- [Usage](http://cakecoveralls.readthedocs.org/en/develop/usage/)
+- [Documentation](https://cake-contrib.github.io/Cake.Coveralls/)
 
 ## Chat Room
 Come join in the conversation about Cake.Coveralls in our Gitter Chat Room
