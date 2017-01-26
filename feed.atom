@@ -4,15 +4,45 @@
 	<id>http://cake-contrib.github.io/Cake.Coveralls</id>
 	<title />
 	<rights>2017</rights>
-	<updated>2017-01-26T20:41:43Z</updated>
+	<updated>2017-01-26T21:39:49Z</updated>
 	<entry>
 		<author>
-			<name>me</name>
+			<name>gep13</name>
 		</author>
-		<link href="http://cake-contrib.github.io/Cake.Coveralls/blog/new-release" />
-		<id>http://cake-contrib.github.io/Cake.Coveralls/blog/new-release</id>
-		<title>New Release</title>
-		<updated>2016-01-01T00:00:00Z</updated>
-		<summary>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;</summary>
+		<link href="http://cake-contrib.github.io/Cake.Coveralls/blog/new-release-0.3.0" />
+		<id>http://cake-contrib.github.io/Cake.Coveralls/blog/new-release-0.3.0</id>
+		<title>New Release - 0.3.0</title>
+		<updated>2017-01-26T00:00:00Z</updated>
+		<summary>&lt;p&gt;Since the last release, but I hope you will agree that it has been worth waiting for.  This release includes the following:&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<author>
+			<name>gep13</name>
+		</author>
+		<link href="http://cake-contrib.github.io/Cake.Coveralls/blog/new-release-0.2.1" />
+		<id>http://cake-contrib.github.io/Cake.Coveralls/blog/new-release-0.2.1</id>
+		<title>New Release - 0.2.1</title>
+		<updated>2016-11-08T00:00:00Z</updated>
+		<summary>&lt;p&gt;In order to allow Cake to correctly load addin's, we have updated the NuGet package structure to include a lib folder.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<author>
+			<name>gep13</name>
+		</author>
+		<link href="http://cake-contrib.github.io/Cake.Coveralls/blog/new-release-0.2.0" />
+		<id>http://cake-contrib.github.io/Cake.Coveralls/blog/new-release-0.2.0</id>
+		<title>New Release - 0.2.0</title>
+		<updated>2016-08-22T00:00:00Z</updated>
+		<summary>&lt;p&gt;After the initial release of Cake.Coveralls a couple days ago, we noticed a couple problems, that warranted a new release, so here it is.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<author>
+			<name>gep13</name>
+		</author>
+		<link href="http://cake-contrib.github.io/Cake.Coveralls/blog/new-release-0.1.0" />
+		<id>http://cake-contrib.github.io/Cake.Coveralls/blog/new-release-0.1.0</id>
+		<title>New Release - 0.1.0</title>
+		<updated>2016-08-18T00:00:00Z</updated>
+		<summary>&lt;p&gt;Very happy to announce the initial release of the Cake.Coveralls addin for &lt;a href="http://cakebuild.net/"&gt;Cake&lt;/a&gt;.&lt;/p&gt;</summary>
 	</entry>
 </feed>
