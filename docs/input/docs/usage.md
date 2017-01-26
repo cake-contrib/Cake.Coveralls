@@ -9,7 +9,7 @@ Within your build script, you will need to add the following (normally near the 
 and either one of the following:
 
 ```csharp
-#tools coveralls.net
+#tool coveralls.net
 ```
 
 ```csharp
@@ -41,7 +41,7 @@ Task("Upload-Coverage-Report")
 Task("Upload-Coverage-Report")
     .Does(() =>
 {
-    CoverallsIo("coverage.xml", CoverallsNetReportType.OpenCover);
+    CoverallsNet("coverage.xml", CoverallsNetReportType.OpenCover);
 });
 ```
 
