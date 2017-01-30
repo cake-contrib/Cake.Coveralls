@@ -42,22 +42,14 @@ var searchModule = function() {
 
     a({
         id:1,
-        title:"CoverallsIoSettings",
-        content:"CoverallsIoSettings",
+        title:"CoverallsAliases",
+        content:"CoverallsAliases",
         description:'',
         tags:''
     });
 
     a({
         id:2,
-        title:"CoverallsNetRunner",
-        content:"CoverallsNetRunner",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:3,
         title:"CoverallsIoRunner",
         content:"CoverallsIoRunner",
         description:'',
@@ -65,9 +57,17 @@ var searchModule = function() {
     });
 
     a({
+        id:3,
+        title:"CoverallsNetRunner",
+        content:"CoverallsNetRunner",
+        description:'',
+        tags:''
+    });
+
+    a({
         id:4,
-        title:"CoverallsAliases",
-        content:"CoverallsAliases",
+        title:"CoverallsIoSettings",
+        content:"CoverallsIoSettings",
         description:'',
         tags:''
     });
@@ -87,14 +87,8 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoSettings',
-        title:"CoverallsIoSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
-        title:"CoverallsNetRunner",
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
+        title:"CoverallsAliases",
         description:""
     });
 
@@ -105,8 +99,14 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
-        title:"CoverallsAliases",
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
+        title:"CoverallsNetRunner",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoSettings',
+        title:"CoverallsIoSettings",
         description:""
     });
 
