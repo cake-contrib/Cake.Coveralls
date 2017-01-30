@@ -34,30 +34,6 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"CoverallsNetReportType",
-        content:"CoverallsNetReportType",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
-        title:"CoverallsNetSettings",
-        content:"CoverallsNetSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
-        title:"CoverallsIoSettings",
-        content:"CoverallsIoSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:3,
         title:"CoverallsNetRunner",
         content:"CoverallsNetRunner",
         description:'',
@@ -65,7 +41,15 @@ var searchModule = function() {
     });
 
     a({
-        id:4,
+        id:1,
+        title:"CoverallsAliases",
+        content:"CoverallsAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:2,
         title:"CoverallsIoRunner",
         content:"CoverallsIoRunner",
         description:'',
@@ -73,16 +57,44 @@ var searchModule = function() {
     });
 
     a({
+        id:3,
+        title:"CoverallsNetSettings",
+        content:"CoverallsNetSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:4,
+        title:"CoverallsIoSettings",
+        content:"CoverallsIoSettings",
+        description:'',
+        tags:''
+    });
+
+    a({
         id:5,
-        title:"CoverallsAliases",
-        content:"CoverallsAliases",
+        title:"CoverallsNetReportType",
+        content:"CoverallsNetReportType",
         description:'',
         tags:''
     });
 
     y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
-        title:"CoverallsNetReportType",
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
+        title:"CoverallsNetRunner",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
+        title:"CoverallsAliases",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
+        title:"CoverallsIoRunner",
         description:""
     });
 
@@ -99,20 +111,8 @@ var searchModule = function() {
     });
 
     y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
-        title:"CoverallsNetRunner",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
-        title:"CoverallsIoRunner",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
-        title:"CoverallsAliases",
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
+        title:"CoverallsNetReportType",
         description:""
     });
 
