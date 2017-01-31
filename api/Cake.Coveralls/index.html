@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.Coveralls/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.Coveralls/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - New Release - 0.2.1</title>
+        <title>Docs - API - Cake.Coveralls Namespace</title>
         <link href="/Cake.Coveralls/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.Coveralls/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.Coveralls/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -57,8 +57,8 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/Cake.Coveralls/docs">Documentation</a></li>
-        <li class="active"><a href="/Cake.Coveralls/blog">Blog</a></li>
-        <li><a href="/Cake.Coveralls/api">API</a></li>
+        <li><a href="/Cake.Coveralls/blog">Blog</a></li>
+        <li class="active"><a href="/Cake.Coveralls/api">API</a></li>
  
                         </ul>       
                     </div>
@@ -72,28 +72,66 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-        <div><p><a href="https://github.com/cake-contrib/Cake.Coveralls/tree/develop/docs/input/blog/new-release-0.2.1.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#correcting-nuget-folder-structure">Correcting NuGet Folder Structure</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#EnumTypes">Enum Types</a></p>
+<p><a href="#ClassTypes">Class Types</a></p>
 <hr class="infobar-hidden">
 </div>
 
                 </section>
                 <section class="sidebar">                    
-                    
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+    </script>
+	
+    <hr>
 
                     <ul class="sidebar-menu">
                         
+	<li class="header">Namespaces</li>   
 
-    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
-        <li><a href="/blog/release">Release</a></li>
-    
-    <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
-        <li><a href="/blog/archive/2017/01">January, 2017</a></li>
-        <li><a href="/blog/archive/2016/11">November, 2016</a></li>
-        <li><a href="/blog/archive/2016/08">August, 2016</a></li>
-    
-    <li class="header"><i class="fa fa-user"></i> Authors</li>    
-        <li><a href="/blog/author/gep13">gep13</a></li>
+				<li class="treeview active">
+				<a href="/Cake.Coveralls/api/Cake">Cake</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li class=" selected"><a href="/Cake.Coveralls/api/Cake.Coveralls">Cake<wbr>.Coveralls</a></li>
+</ul></li>			<li><a href="/Cake.Coveralls/api/global">global</a></li>
+      
 
                     </ul>
                 </section>                
@@ -105,32 +143,88 @@
 
 
 
-	<section class="content-header">
-		<h1>New Release - 0.2.1</h1>
-	</section>
-	<section class="content">
+<section class="content-header">
+	<h1>Cake<wbr>.Coveralls <small>Namespace</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+
+			<h1 id="EnumTypes">Enum Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Enum</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType">Coveralls<wbr>Net<wbr>Report<wbr>Type</a></td>
+									<td>
+    The coverage report type for CoverallNetRunner
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
 		
-
-
-<dl class="dl-horizontal">
-    <dt><i class="fa fa-calendar"></i> Published</dt>
-    <dd>08 November 2016</dd>
-        <dt><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/release">Release</a></dd>
-            <dt><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/gep13">gep13</a></dd>
-</dl>
-
-<h1 id="correcting-nuget-folder-structure">Correcting NuGet Folder Structure</h1>
-<p>In order to allow Cake to correctly load addin's, we have updated the NuGet package structure to include a lib folder.</p>
-<p>Full details about this release can be found here:</p>
-<ul>
-<li><a href="https://github.com/cake-contrib/Cake.Coveralls/issues/11"><strong>#11</strong></a> Add lib folder structure to NuGet package</li>
-</ul>
-<p>Please do not hesitate to reach out in the <a href="https://gitter.im/cake-contrib/Lobby">Gitter Channel</a> if you have any issues using this addin.</p>
-
-
-	</section>
+			<h1 id="ClassTypes">Class Types</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Class</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases">CoverallsAliases</a></td>
+									<td>
+    <p>Contains aliases related to <a href="https://coveralls.io/">Coveralls.io</a>.</p>
+    <p>
+    In order to use the commands for this addin, you will need to include either of the following in your build.cake file to download and
+    reference from NuGet.org:
+    </p><pre><code class="cs">#tool coveralls.net</code></pre>
+    <pre><code class="cs">#tool coveralls.io</code></pre>
+    In addition, you will need to include the following:
+    <pre><code class="cs">#addin Cake.Coveralls</code></pre>
+    <p></p>
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner">CoverallsIoRunner</a></td>
+									<td>
+    The Coveralls.io runner.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoSettings">CoverallsIoSettings</a></td>
+									<td>
+    Contains settings used by <code class="cs"><a href="/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner">CoverallsIoRunner</a></code>.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner">CoverallsNetRunner</a></td>
+									<td>
+    The Coveralls.io runner.
+    </td>
+							</tr>
+							<tr>
+								<td><a href="/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetSettings">CoverallsNetSettings</a></td>
+									<td>
+    Contains settings used by <code class="cs"><a href="/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner">CoverallsNetRunner</a></code>.
+    </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+	
+</section>
                 
             </div>           
             
