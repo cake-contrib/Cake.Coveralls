@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - Examples</title>
+        <title>Docs - New Release - 0.3.0</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -56,8 +56,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
-                                    <li class="active"><a href="/docs">Documentation</a></li>
-        <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/docs">Documentation</a></li>
+        <li class="active"><a href="/blog">Blog</a></li>
  
                         </ul>       
                     </div>
@@ -71,7 +71,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#build-script">Build Script</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#its-been-a-while">It's been a while...</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -81,13 +81,17 @@
 
                     <ul class="sidebar-menu">
                         
-                <li class="treeview active">
-                    <a href="/docs/usage">Usage</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                                        <li class="selected"><a href="/docs/usage/examples">Examples</a></li>
 
-                    </ul>
-                </li>
+    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
+        <li><a href="/blog/release">Release</a></li>
+    
+    <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/01">January, 2017</a></li>
+        <li><a href="/blog/archive/2016/11">November, 2016</a></li>
+        <li><a href="/blog/archive/2016/08">August, 2016</a></li>
+    
+    <li class="header"><i class="fa fa-user"></i> Authors</li>    
+        <li><a href="/blog/author/gep13">gep13</a></li>
 
                     </ul>
                 </section>                
@@ -100,49 +104,43 @@
 
 
 	<section class="content-header">
-		<h1>Examples</h1>
+		<h1>New Release - 0.3.0</h1>
 	</section>
 	<section class="content">
-		<h1 id="build-script">Build Script</h1>
-<p>Within your build script, you will need to add the following (normally near the top of the file):</p>
-<pre><code class="language-csharp">#addin Cake.Coveralls
-</code></pre>
-<p>and either one of the following:</p>
-<pre><code class="language-csharp">#tool coveralls.net
-</code></pre>
-<pre><code class="language-csharp">#tool coveralls.io
-</code></pre>
-<p>And then you will be able to utilise one of the available Aliases.  An example of each can be seen below:</p>
-<pre><code class="language-csharp">Task("Upload-Coverage-Report")
-    .Does(() =&gt;
-{
-    CoverallsIo("coverage.xml");
-});
-</code></pre>
-<pre><code class="language-csharp">Task("Upload-Coverage-Report")
-    .Does(() =&gt;
-{
-    CoverallsIo("coverage.xml", new CoverallsIoSettings()
-    {
-        RepoToken = "abcdef"
-    });
-});
-</code></pre>
-<pre><code class="language-csharp">Task("Upload-Coverage-Report")
-    .Does(() =&gt;
-{
-    CoverallsNet("coverage.xml", CoverallsNetReportType.OpenCover);
-});
-</code></pre>
-<pre><code class="language-csharp">Task("Upload-Coverage-Report")
-    .Does(() =&gt;
-{
-    CoverallsNet("coverage.xml", CoverallsNetReportType.OpenCover, new CoverallsNetSettings()
-    {
-        RepoToken = "abcdef"
-    });
-});
-</code></pre>
+		
+
+
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>26 January 2017</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/release">Release</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/gep13">gep13</a></dd>
+</dl>
+
+<h1 id="its-been-a-while">It's been a while...</h1>
+<p>Since the last release, but I hope you will agree that it has been worth waiting for.  This release includes the following:</p>
+<h2 id="improvements">Improvements</h2>
+<ul>
+<li><a href="https://github.com/cake-contrib/Cake.Coveralls/issues/10"><strong>#10</strong></a> Switch away from using gep13.DefaultBuild and use Cake.Recipe instead</li>
+<li><a href="https://github.com/cake-contrib/Cake.Coveralls/issues/7"><strong>#7</strong></a> Update nuspec with correct information</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li><a href="https://github.com/cake-contrib/Cake.Coveralls/issues/17"><strong>#17</strong></a> Add Wyam Documentation generation</li>
+<li><a href="https://github.com/cake-contrib/Cake.Coveralls/issues/6"><strong>#6</strong></a> Correct usage documentation</li>
+</ul>
+<p>The main one here is the inclusion of <a href="https://github.com/cake-contrib/Cake.Recipe">Cake.Recipe</a>.  For a while now, I have been working on the concept of a convention driven, drop in, build system, that can be applied to any number of projects.  This is very much nearing completion, with all the main parts now in place.</p>
+<p>In this most recent version, I have added:</p>
+<ul>
+<li>Execution of GitLink to allow debugging of assemblies generated as part of the build</li>
+<li>Wyam documentation generation, including this blog post that you are reading now.</li>
+<li>Removal of some dependencies in the build process which meant additional nuget packages were required</li>
+</ul>
+<p>More details will follow on all of this when the Cake.Recipe project is officially released.  This release of Cake.Coveralls is really just taking it for it's initial spin.</p>
+<p>Please do not hesitate to reach out in the <a href="https://gitter.im/cake-contrib/Lobby">Gitter Channel</a> if you have any issues using this addin.</p>
+
 
 	</section>
                 

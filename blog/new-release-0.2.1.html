@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Docs - Examples</title>
+        <title>Docs - New Release - 0.2.1</title>
         <link href="/assets/css/mermaid.css" rel="stylesheet">
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -56,8 +56,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
-                                    <li class="active"><a href="/docs">Documentation</a></li>
-        <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/docs">Documentation</a></li>
+        <li class="active"><a href="/blog">Blog</a></li>
  
                         </ul>       
                     </div>
@@ -71,7 +71,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#build-script">Build Script</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#correcting-nuget-folder-structure">Correcting NuGet Folder Structure</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -81,13 +81,17 @@
 
                     <ul class="sidebar-menu">
                         
-                <li class="treeview active">
-                    <a href="/docs/usage">Usage</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                                        <li class="selected"><a href="/docs/usage/examples">Examples</a></li>
 
-                    </ul>
-                </li>
+    <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
+        <li><a href="/blog/release">Release</a></li>
+    
+    <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
+        <li><a href="/blog/archive/2017/01">January, 2017</a></li>
+        <li><a href="/blog/archive/2016/11">November, 2016</a></li>
+        <li><a href="/blog/archive/2016/08">August, 2016</a></li>
+    
+    <li class="header"><i class="fa fa-user"></i> Authors</li>    
+        <li><a href="/blog/author/gep13">gep13</a></li>
 
                     </ul>
                 </section>                
@@ -100,49 +104,29 @@
 
 
 	<section class="content-header">
-		<h1>Examples</h1>
+		<h1>New Release - 0.2.1</h1>
 	</section>
 	<section class="content">
-		<h1 id="build-script">Build Script</h1>
-<p>Within your build script, you will need to add the following (normally near the top of the file):</p>
-<pre><code class="language-csharp">#addin Cake.Coveralls
-</code></pre>
-<p>and either one of the following:</p>
-<pre><code class="language-csharp">#tool coveralls.net
-</code></pre>
-<pre><code class="language-csharp">#tool coveralls.io
-</code></pre>
-<p>And then you will be able to utilise one of the available Aliases.  An example of each can be seen below:</p>
-<pre><code class="language-csharp">Task("Upload-Coverage-Report")
-    .Does(() =&gt;
-{
-    CoverallsIo("coverage.xml");
-});
-</code></pre>
-<pre><code class="language-csharp">Task("Upload-Coverage-Report")
-    .Does(() =&gt;
-{
-    CoverallsIo("coverage.xml", new CoverallsIoSettings()
-    {
-        RepoToken = "abcdef"
-    });
-});
-</code></pre>
-<pre><code class="language-csharp">Task("Upload-Coverage-Report")
-    .Does(() =&gt;
-{
-    CoverallsNet("coverage.xml", CoverallsNetReportType.OpenCover);
-});
-</code></pre>
-<pre><code class="language-csharp">Task("Upload-Coverage-Report")
-    .Does(() =&gt;
-{
-    CoverallsNet("coverage.xml", CoverallsNetReportType.OpenCover, new CoverallsNetSettings()
-    {
-        RepoToken = "abcdef"
-    });
-});
-</code></pre>
+		
+
+
+<dl class="dl-horizontal">
+    <dt><i class="fa fa-calendar"></i> Published</dt>
+    <dd>08 November 2016</dd>
+        <dt><i class="fa fa-bookmark"></i> Category</dt>
+        <dd><a href="/blog/release">Release</a></dd>
+            <dt><i class="fa fa-user"></i> Author</dt>
+        <dd><a href="/blog/author/gep13">gep13</a></dd>
+</dl>
+
+<h1 id="correcting-nuget-folder-structure">Correcting NuGet Folder Structure</h1>
+<p>In order to allow Cake to correctly load addin's, we have updated the NuGet package structure to include a lib folder.</p>
+<p>Full details about this release can be found here:</p>
+<ul>
+<li><a href="https://github.com/cake-contrib/Cake.Coveralls/issues/11"><strong>#11</strong></a> Add lib folder structure to NuGet package</li>
+</ul>
+<p>Please do not hesitate to reach out in the <a href="https://gitter.im/cake-contrib/Lobby">Gitter Channel</a> if you have any issues using this addin.</p>
+
 
 	</section>
                 
