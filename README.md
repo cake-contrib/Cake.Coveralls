@@ -6,7 +6,7 @@ Cake.Coveralls is an Addin for [Cake](http://cakebuild.net/) with ability to pus
 
 ## Information
 
-||Stable|Pre-release|
+| |Stable|Pre-release|
 |:--:|:--:|:--:|
 |GitHub Release|-|[![GitHub release](https://img.shields.io/github/release/cake-contrib/Cake.Coveralls.svg)](https://github.com/cake-contrib/Cake.Coveralls/releases/latest)|
 |NuGet|[![NuGet](https://img.shields.io/nuget/v/Cake.Coveralls.svg)](https://www.nuget.org/packages/Cake.Coveralls)|[![NuGet](https://img.shields.io/nuget/vpre/Cake.Coveralls.svg)](https://www.nuget.org/packages/Cake.Coveralls)|
