@@ -34,22 +34,6 @@ var searchModule = function() {
 
     a({
         id:0,
-        title:"CoverallsNetSettings",
-        content:"CoverallsNetSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
-        title:"CoverallsAliases",
-        content:"CoverallsAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
         title:"CoverallsIoSettings",
         content:"CoverallsIoSettings",
         description:'',
@@ -57,7 +41,7 @@ var searchModule = function() {
     });
 
     a({
-        id:3,
+        id:1,
         title:"CoverallsNetRunner",
         content:"CoverallsNetRunner",
         description:'',
@@ -65,7 +49,7 @@ var searchModule = function() {
     });
 
     a({
-        id:4,
+        id:2,
         title:"CoverallsIoRunner",
         content:"CoverallsIoRunner",
         description:'',
@@ -73,23 +57,27 @@ var searchModule = function() {
     });
 
     a({
-        id:5,
+        id:3,
+        title:"CoverallsAliases",
+        content:"CoverallsAliases",
+        description:'',
+        tags:''
+    });
+
+    a({
+        id:4,
         title:"CoverallsNetReportType",
         content:"CoverallsNetReportType",
         description:'',
         tags:''
     });
 
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetSettings',
+    a({
+        id:5,
         title:"CoverallsNetSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
-        title:"CoverallsAliases",
-        description:""
+        content:"CoverallsNetSettings",
+        description:'',
+        tags:''
     });
 
     y({
@@ -111,8 +99,20 @@ var searchModule = function() {
     });
 
     y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
+        title:"CoverallsAliases",
+        description:""
+    });
+
+    y({
         url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
         title:"CoverallsNetReportType",
+        description:""
+    });
+
+    y({
+        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetSettings',
+        title:"CoverallsNetSettings",
         description:""
     });
 
