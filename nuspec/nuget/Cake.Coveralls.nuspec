@@ -15,9 +15,9 @@
     <tags>Cake, Script, Build, Coveralls</tags>
   </metadata>
   <files>
-    <file src="net45\Cake.Coveralls.dll" target="lib/net45" />
-    <file src="net45\Cake.Coveralls.pdb" target="lib/net45" />
-    <file src="net45\Cake.Coveralls.xml" target="lib/net45" />
+    <file src="net46\Cake.Coveralls.dll" target="lib/net46" />
+    <file src="net46\Cake.Coveralls.pdb" target="lib/net46" />
+    <file src="net46\Cake.Coveralls.xml" target="lib/net46" />
     <file src="netstandard1.6\Cake.Coveralls.dll" target="lib/netstandard1.6" />
     <file src="netstandard1.6\Cake.Coveralls.pdb" target="lib/netstandard1.6" />
   </files>
