@@ -2,13 +2,14 @@
 
 Environment.SetVariableNames();
 
-BuildParameters.SetParameters(context: Context, 
+BuildParameters.SetParameters(context: Context,
                             buildSystem: BuildSystem,
                             sourceDirectoryPath: "./Source",
                             title: "Cake.Coveralls",
                             repositoryOwner: "cake-contrib",
                             repositoryName: "Cake.Coveralls",
-                            appVeyorAccountName: "cakecontrib");
+                            appVeyorAccountName: "cakecontrib",
+                            shouldRunGitVersion: true);
 
 BuildParameters.PrintParameters(Context);
 
