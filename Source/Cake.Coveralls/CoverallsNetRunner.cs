@@ -147,10 +147,10 @@ namespace Cake.Coveralls
                 builder.AppendQuoted(settings.CommitMessage);
             }
 
-            if (settings.JobId != 0)
+            if (!string.IsNullOrEmpty(settings.JobId))
             {
                 builder.Append("--jobId");
-                builder.Append(settings.JobId.ToString());
+                builder.Append(settings.JobId);
             }
 
             if (!string.IsNullOrWhiteSpace(settings.ServiceName))
