@@ -62,7 +62,7 @@ namespace Cake.Coveralls
         /// Gets or sets the Job Id to provide to coveralls.io.
         /// </summary>
         /// <remarks>Default is 0.</remarks>
-        public int JobId { get; set; }
+        public string JobId { get; set; }
 
         /// <summary>
         /// Gets or sets the service name for the coverage report.

@@ -275,7 +275,7 @@ namespace Cake.Coveralls.Tests
             public void Should_Set_Job_Id()
             {
                 // Given
-                var fixture = new CoverallsNetRunnerFixture { Settings = { JobId = 123456 } };
+                var fixture = new CoverallsNetRunnerFixture { Settings = { JobId = "123456" } };
 
                 // When
                 var result = fixture.Run();
