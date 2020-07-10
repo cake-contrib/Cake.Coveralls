@@ -62,7 +62,7 @@ namespace Cake.Coveralls
         /// <returns>The tool executable name.</returns>
         protected override IEnumerable<string> GetToolExecutableNames()
         {
-            return new[] { "csmacnz.coveralls.exe", "csmacnz.Coveralls" };
+            return new[] { "csmacnz.Coveralls.exe", "csmacnz.Coveralls" };
         }
 
         private static string GetReportType(CoverallsNetReportType reportType)
