@@ -40,8 +40,8 @@ namespace Cake.Coveralls.Tests
             }
 
             [Theory]
-            [InlineData("/bin/tools/CoverallsNet/csmacnz.coveralls.exe", "/bin/tools/CoverallsNet/csmacnz.coveralls.exe")]
-            [InlineData("./tools/CoverallsNet/csmacnz.coveralls.exe", "/Working/tools/CoverallsNet/csmacnz.coveralls.exe")]
+            [InlineData("/bin/tools/CoverallsNet/csmacnz.Coveralls.exe", "/bin/tools/CoverallsNet/csmacnz.Coveralls.exe")]
+            [InlineData("./tools/CoverallsNet/csmacnz.Coveralls.exe", "/Working/tools/CoverallsNet/csmacnz.Coveralls.exe")]
             public void Should_Use_CoverallsNet_Runner_From_Tool_Path_If_Provided(string toolPath, string expected)
             {
                 // Given
@@ -56,7 +56,7 @@ namespace Cake.Coveralls.Tests
             }
 
             [Theory]
-            [InlineData("C:/CoverallsNet/csmacnz.coveralls.exe", "C:/CoverallsNet/csmacnz.coveralls.exe")]
+            [InlineData("C:/CoverallsNet/csmacnz.Coveralls.exe", "C:/CoverallsNet/csmacnz.Coveralls.exe")]
             public void Should_Use_CoverallsNet_Runner_From_Tool_Path_If_Provided_On_Windows(string toolPath, string expected)
             {
                 // Given
@@ -80,7 +80,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("/Working/tools/csmacnz.coveralls.exe", result.Path.FullPath);
+                Assert.Equal("/Working/tools/csmacnz.Coveralls.exe", result.Path.FullPath);
             }
 
             [Fact]
