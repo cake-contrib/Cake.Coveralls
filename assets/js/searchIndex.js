@@ -1,119 +1,136 @@
 
-var camelCaseTokenizer = function (obj) {
+var camelCaseTokenizer = function (builder) {
+
+  var pipelineFunction = function (token) {
     var previous = '';
-    return obj.toString().trim().split(/[\s\-]+|(?=[A-Z])/).reduce(function(acc, cur) {
-        var current = cur.toLowerCase();
-        if(acc.length === 0) {
-            previous = current;
-            return acc.concat(current);
-        }
-        previous = previous.concat(current);
-        return acc.concat([current, previous]);
+    // split camelCaseString to on each word and combined words
+    // e.g. camelCaseTokenizer -> ['camel', 'case', 'camelcase', 'tokenizer', 'camelcasetokenizer']
+    var tokenStrings = token.toString().trim().split(/[\s\-]+|(?=[A-Z])/).reduce(function(acc, cur) {
+      var current = cur.toLowerCase();
+      if (acc.length === 0) {
+        previous = current;
+        return acc.concat(current);
+      }
+      previous = previous.concat(current);
+      return acc.concat([current, previous]);
     }, []);
+
+    // return token for each string
+    // will copy any metadata on input token
+    return tokenStrings.map(function(tokenString) {
+      return token.clone(function(str) {
+        return tokenString;
+      })
+    });
+  }
+
+  lunr.Pipeline.registerFunction(pipelineFunction, 'camelCaseTokenizer')
+
+  builder.pipeline.before(lunr.stemmer, pipelineFunction)
 }
-lunr.tokenizer.registerFunction(camelCaseTokenizer, 'camelCaseTokenizer')
 var searchModule = function() {
+    var documents = [];
     var idMap = [];
-    function y(e) { 
-        idMap.push(e); 
+    function a(a,b) { 
+        documents.push(a);
+        idMap.push(b); 
     }
+
+    a(
+        {
+            id:0,
+            title:"CoverallsNetReportType",
+            content:"CoverallsNetReportType",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
+            title:"CoverallsNetReportType",
+            description:""
+        }
+    );
+    a(
+        {
+            id:1,
+            title:"CoverallsNetRunner",
+            content:"CoverallsNetRunner",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
+            title:"CoverallsNetRunner",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
+            title:"CoverallsAliases",
+            content:"CoverallsAliases",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
+            title:"CoverallsAliases",
+            description:""
+        }
+    );
+    a(
+        {
+            id:3,
+            title:"CoverallsIoSettings",
+            content:"CoverallsIoSettings",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoSettings',
+            title:"CoverallsIoSettings",
+            description:""
+        }
+    );
+    a(
+        {
+            id:4,
+            title:"CoverallsNetSettings",
+            content:"CoverallsNetSettings",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetSettings',
+            title:"CoverallsNetSettings",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"CoverallsIoRunner",
+            content:"CoverallsIoRunner",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
+            title:"CoverallsIoRunner",
+            description:""
+        }
+    );
     var idx = lunr(function() {
-        this.field('title', { boost: 10 });
+        this.field('title');
         this.field('content');
-        this.field('description', { boost: 5 });
-        this.field('tags', { boost: 50 });
+        this.field('description');
+        this.field('tags');
         this.ref('id');
-        this.tokenizer(camelCaseTokenizer);
+        this.use(camelCaseTokenizer);
 
         this.pipeline.remove(lunr.stopWordFilter);
         this.pipeline.remove(lunr.stemmer);
-    });
-    function a(e) { 
-        idx.add(e); 
-    }
-
-    a({
-        id:0,
-        title:"CoverallsIoSettings",
-        content:"CoverallsIoSettings",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:1,
-        title:"CoverallsNetRunner",
-        content:"CoverallsNetRunner",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:2,
-        title:"CoverallsIoRunner",
-        content:"CoverallsIoRunner",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:3,
-        title:"CoverallsAliases",
-        content:"CoverallsAliases",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:4,
-        title:"CoverallsNetReportType",
-        content:"CoverallsNetReportType",
-        description:'',
-        tags:''
-    });
-
-    a({
-        id:5,
-        title:"CoverallsNetSettings",
-        content:"CoverallsNetSettings",
-        description:'',
-        tags:''
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoSettings',
-        title:"CoverallsIoSettings",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
-        title:"CoverallsNetRunner",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
-        title:"CoverallsIoRunner",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
-        title:"CoverallsAliases",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
-        title:"CoverallsNetReportType",
-        description:""
-    });
-
-    y({
-        url:'/Cake.Coveralls/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetSettings',
-        title:"CoverallsNetSettings",
-        description:""
+        documents.forEach(function (doc) { this.add(doc) }, this)
     });
 
     return {

@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="/Cake.Coveralls/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.Coveralls/assets/img/favicon.ico" type="image/x-icon">
         <title>Cake.Coveralls - API - Cake.Coveralls Namespace</title>
-        <link href="/Cake.Coveralls/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.Coveralls/assets/css/highlight.css" rel="stylesheet">
         <link href="/Cake.Coveralls/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/Cake.Coveralls/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -22,6 +21,7 @@
         <script src="/Cake.Coveralls/assets/js/jquery.slimscroll.min.js"></script>
         <script src="/Cake.Coveralls/assets/js/jquery.sticky-kit.min.js"></script>
         <script src="/Cake.Coveralls/assets/js/mermaid.min.js"></script>
+        <script src="/Cake.Coveralls/assets/js/svg-pan-zoom.min.js"></script>
         <!--[if lt IE 9]>
         <script src="/Cake.Coveralls/assets/js/html5shiv.min.js"></script>
         <script src="/Cake.Coveralls/assets/js/respond.min.js"></script>
@@ -57,7 +57,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li><a href="/Cake.Coveralls/docs">Documentation</a></li>
-        <li><a href="/Cake.Coveralls/blog">Blog</a></li>
+        <li><a href="/Cake.Coveralls/tasks">Tasks</a></li>
         <li class="active"><a href="/Cake.Coveralls/api">API</a></li>
  
                         </ul>       
@@ -78,7 +78,8 @@
 </div>
 
                 </section>
-                <section class="sidebar">                    
+                <section class="sidebar">    
+                                     
                     	
 	    <script src="/Cake.Coveralls/assets/js/lunr.min.js"></script>
     <script src="/Cake.Coveralls/assets/js/searchIndex.js"></script>
@@ -106,7 +107,7 @@
             } else {					
                 for(var i = 0; i < results.length; ++i){
                     var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
                 }				
             }
             listHtml += "</ul>";				
@@ -118,6 +119,13 @@
                 runSearch($("#search").val());
             });
         });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
     </script>
 	
     <hr>
@@ -133,6 +141,7 @@
 </ul></li>      
 
                     </ul>
+                            
                 </section>                
             </aside>
             
@@ -149,6 +158,7 @@
 	
 	
 	
+
 
 			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
@@ -202,6 +212,7 @@
 				</div>
 			</div>
 		
+
 			<h1 id="EnumTypes">Enum Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
@@ -222,6 +233,7 @@
 				</div>
 			</div>
 		
+
 	
 </section>
                 
@@ -245,22 +257,53 @@
                 $(document.body).removeClass('sidebar-open');
             });
             
-            $(document).load(function() {
+            $(document).ready(function() {
                 mermaid.initialize(
                 {
                     flowchart:
                     {
-                        htmlLabels: false,
-                        useMaxWidth:false
-                    }
-                });  
-                mermaid.init(undefined, ".mermaid")
-                $('svg').addClass('img-responsive');
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
                 
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });  
             });
+
             hljs.initHighlightingOnLoad();
 
             // Back to top
