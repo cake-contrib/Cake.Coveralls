@@ -39,34 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"CoverallsAliases",
-            content:"CoverallsAliases",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
-            title:"CoverallsAliases",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"CoverallsIoRunner",
-            content:"CoverallsIoRunner",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
-            title:"CoverallsIoRunner",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
             title:"CoverallsNetSettings",
             content:"CoverallsNetSettings",
             description:'',
@@ -80,7 +52,21 @@ var searchModule = function() {
     );
     a(
         {
-            id:3,
+            id:1,
+            title:"CoverallsAliases",
+            content:"CoverallsAliases",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsAliases',
+            title:"CoverallsAliases",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
             title:"CoverallsNetReportType",
             content:"CoverallsNetReportType",
             description:'',
@@ -94,7 +80,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:4,
+            id:3,
             title:"CoverallsIoSettings",
             content:"CoverallsIoSettings",
             description:'',
@@ -108,7 +94,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:5,
+            id:4,
             title:"CoverallsNetRunner",
             content:"CoverallsNetRunner",
             description:'',
@@ -117,6 +103,20 @@ var searchModule = function() {
         {
             url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
             title:"CoverallsNetRunner",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"CoverallsIoRunner",
+            content:"CoverallsIoRunner",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
+            title:"CoverallsIoRunner",
             description:""
         }
     );
