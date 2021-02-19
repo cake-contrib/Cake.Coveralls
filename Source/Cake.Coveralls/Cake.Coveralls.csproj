@@ -3,14 +3,37 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
+  <PropertyGroup>
+      <StartYear>2016</StartYear>
+      <EndYear>$([System.DateTime]::Today.Year)</EndYear>
+      <FullYear Condition="'$(StartYear)'=='$(EndYear)'">$(StartYear)</FullYear>
+      <FullYear Condition="'$(StartYear)'!='$(EndYear)'">$(StartYear)-$(EndYear)</FullYear>
+
+      <!-- Properties related to packaging -->
+      <Authors>Gary Ewan Park</Authors>
+      <Copyright>Copyright © $(FullYear) — Gary Ewan Park</Copyright>
+      <Description>Cake AddIn that extends Cake with ability to post Code Coverage results to Coveralls.io.</Description>
+      <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <PackageProjectUrl>https://github.com/cake-contrib/Cake.Coveralls/</PackageProjectUrl>
+      <PackageTags>Cake;Script;Build;Coveralls</PackageTags>
+      <RepositoryUrl>https://github.com/cake-contrib/Cake.Coveralls.git</RepositoryUrl>
+      <PackageReleaseNotes>https://github.com/cake-contrib/Cake.Coveralls/releases/tag/$(Version)</PackageReleaseNotes>
+  </PropertyGroup>
   <PropertyGroup>
     <CodeAnalysisRuleSet>Cake.Coveralls.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Cake.Core" Version="0.33.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
   </ItemGroup>
 </Project>
