@@ -15,7 +15,7 @@
 
       <!-- Properties related to packaging -->
       <Authors>Gary Ewan Park</Authors>
-      <Copyright>Copyright © $(FullYear) — Gary Ewan Park</Copyright>
+      <Copyright>Copyright © $(FullYear) — Cake Contributions</Copyright>
       <Description>Cake AddIn that extends Cake with ability to post Code Coverage results to Coveralls.io.</Description>
       <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
