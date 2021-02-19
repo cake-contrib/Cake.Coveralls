@@ -39,34 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"CoverallsNetReportType",
-            content:"CoverallsNetReportType",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
-            title:"CoverallsNetReportType",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"CoverallsNetRunner",
-            content:"CoverallsNetRunner",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
-            title:"CoverallsNetRunner",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
             title:"CoverallsAliases",
             content:"CoverallsAliases",
             description:'',
@@ -80,21 +52,21 @@ var searchModule = function() {
     );
     a(
         {
-            id:3,
-            title:"CoverallsIoSettings",
-            content:"CoverallsIoSettings",
+            id:1,
+            title:"CoverallsIoRunner",
+            content:"CoverallsIoRunner",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoSettings',
-            title:"CoverallsIoSettings",
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
+            title:"CoverallsIoRunner",
             description:""
         }
     );
     a(
         {
-            id:4,
+            id:2,
             title:"CoverallsNetSettings",
             content:"CoverallsNetSettings",
             description:'',
@@ -108,15 +80,43 @@ var searchModule = function() {
     );
     a(
         {
-            id:5,
-            title:"CoverallsIoRunner",
-            content:"CoverallsIoRunner",
+            id:3,
+            title:"CoverallsNetReportType",
+            content:"CoverallsNetReportType",
             description:'',
             tags:''
         },
         {
-            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoRunner',
-            title:"CoverallsIoRunner",
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetReportType',
+            title:"CoverallsNetReportType",
+            description:""
+        }
+    );
+    a(
+        {
+            id:4,
+            title:"CoverallsIoSettings",
+            content:"CoverallsIoSettings",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsIoSettings',
+            title:"CoverallsIoSettings",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"CoverallsNetRunner",
+            content:"CoverallsNetRunner",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Cake.Coveralls/api/Cake.Coveralls/CoverallsNetRunner',
+            title:"CoverallsNetRunner",
             description:""
         }
     );
