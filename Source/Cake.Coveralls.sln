@@ -18,11 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildScripts", "BuildScript
 		..\recipe.cake = ..\recipe.cake
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{6B75DCDE-1B14-41E1-BEC9-05F3FDC6197F}"
-	ProjectSection(SolutionItems) = preProject
-		..\tools\packages.config = ..\tools\packages.config
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

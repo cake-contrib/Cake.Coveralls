@@ -25,7 +25,8 @@ Cake.Coveralls is an Addin for [Cake](http://cakebuild.net/) with ability to pus
 
 - [Documentation](https://cake-contrib.github.io/Cake.Coveralls/)
 
-## Chat Room
-Come join in the conversation about Cake.Coveralls in our Gitter Chat Room
+## Discussion
 
-[![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+If you have questions, search for an existing one, or create a new discussion on the Cake GitHub repository, using the `extension-q-a` category.
+
+[![Join in the discussion on the Cake repository](https://img.shields.io/badge/GitHub-Discussions-green?logo=github)](https://github.com/cake-build/cake/discussions)
