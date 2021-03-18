@@ -6,7 +6,7 @@ namespace Cake.Coveralls.Tests
     internal sealed class CoverallsNetRunnerFixture : ToolFixture<CoverallsNetSettings>
     {
         public CoverallsNetRunnerFixture()
-             : base("csmacnz.coveralls.exe")
+             : base("csmacnz.Coveralls.exe")
         {
             CodeCoverageReportFilePath = "c:/temp/coverage.xml";
             ReportType = CoverallsNetReportType.OpenCover;

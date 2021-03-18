@@ -21,7 +21,7 @@
       <PackageIconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics/png/cake-contrib-medium.png</PackageIconUrl>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <PackageProjectUrl>https://github.com/cake-contrib/Cake.Coveralls/</PackageProjectUrl>
-      <PackageTags>Cake;Script;Build;Coveralls</PackageTags>
+      <PackageTags>cake;script;build;coveralls;cake-addin</PackageTags>
       <RepositoryUrl>https://github.com/cake-contrib/Cake.Coveralls.git</RepositoryUrl>
       <PackageReleaseNotes>https://github.com/cake-contrib/Cake.Coveralls/releases/tag/$(Version)</PackageReleaseNotes>
   </PropertyGroup>
