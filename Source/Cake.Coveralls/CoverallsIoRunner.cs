@@ -60,8 +60,7 @@ namespace Cake.Coveralls
         private ProcessArgumentBuilder GetArguments(FilePath codeCoverageReportFilePath, CoverallsIoSettings settings)
         {
             var builder = new ProcessArgumentBuilder();
-
-            builder.Append("--opencover");
+            builder.Append($"--{settings.ParseType.ToString()}");
             builder.AppendQuoted(codeCoverageReportFilePath.MakeAbsolute(_environment).FullPath);
 
             if (settings.Debug)
