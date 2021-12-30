@@ -21,5 +21,7 @@ namespace Cake.Coveralls
         /// Gets or sets the Repo Token to use when publishing to Coveralls.io
         /// </summary>
         public string RepoToken { get; set; }
+
+        public CoverageParseType ParseType { get; set; } = CoverageParseType.opencover;
     }
 }
