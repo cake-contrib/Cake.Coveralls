@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net50;netcoreapp2.1;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
     <DebugType>full</DebugType>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cake.Core" Version="1.0.0" />
-    <PackageReference Include="Cake.Testing" Version="1.0.0" />
+    <PackageReference Include="Cake.Core" Version="2.0.0" />
+    <PackageReference Include="Cake.Testing" Version="2.0.0" />
     <PackageReference Include="coverlet.msbuild" Version="3.0.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
