@@ -19,16 +19,13 @@
       <Description>Cake AddIn that extends Cake with ability to post Code Coverage results to Coveralls.io.</Description>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <PackageProjectUrl>https://github.com/cake-contrib/Cake.Coveralls/</PackageProjectUrl>
-      <PackageTags>cake;script;build;coveralls;cake-addin</PackageTags>
+      <PackageTags>cake;script;build;coveralls;cake-addin;cake-build;addin</PackageTags>
       <RepositoryUrl>https://github.com/cake-contrib/Cake.Coveralls.git</RepositoryUrl>
       <PackageReleaseNotes>https://github.com/cake-contrib/Cake.Coveralls/releases/tag/$(Version)</PackageReleaseNotes>
   </PropertyGroup>
   <PropertyGroup>
     <CodeAnalysisRuleSet>Cake.Coveralls.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="icon.png" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Cake.Core" Version="1.0.0" PrivateAssets="All" />
@@ -36,7 +33,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="CakeContrib.Guidelines" Version="1.1.1">
+    <PackageReference Include="CakeContrib.Guidelines" Version="1.4.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
