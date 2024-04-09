@@ -19,7 +19,7 @@
       <Description>Cake AddIn that extends Cake with ability to post Code Coverage results to Coveralls.io.</Description>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <PackageProjectUrl>https://github.com/cake-contrib/Cake.Coveralls/</PackageProjectUrl>
-      <PackageTags>cake;script;build;coveralls;cake-addin</PackageTags>
+      <PackageTags>cake;script;build;coveralls;cake-addin;cake-build;addin</PackageTags>
       <RepositoryUrl>https://github.com/cake-contrib/Cake.Coveralls.git</RepositoryUrl>
       <PackageReleaseNotes>https://github.com/cake-contrib/Cake.Coveralls/releases/tag/$(Version)</PackageReleaseNotes>
   </PropertyGroup>
