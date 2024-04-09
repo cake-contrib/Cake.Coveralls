@@ -24,7 +24,7 @@ namespace Cake.Coveralls
         public DirectoryPath BaseFilePath { get; set; }
 
         /// <summary>
-        /// Gets or sets the Repo Token to use when publishing to Coveralls.io
+        /// Gets or sets the Repo Token to use when publishing to <see href="https://coveralls.io/">Coveralls.io</see>.
         /// </summary>
         public string RepoToken { get; set; }
 
@@ -67,7 +67,7 @@ namespace Cake.Coveralls
         /// <summary>
         /// Gets or sets the service name for the coverage report.
         /// </summary>
-        /// <remarks>Default is coveralls.net</remarks>
+        /// <remarks>Default is coveralls.net.</remarks>
         public string ServiceName { get; set; }
 
         /// <summary>

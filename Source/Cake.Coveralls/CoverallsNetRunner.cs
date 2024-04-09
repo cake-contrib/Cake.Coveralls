@@ -19,7 +19,7 @@ namespace Cake.Coveralls
         /// <param name="fileSystem">The file system.</param>
         /// <param name="environment">The environment.</param>
         /// <param name="processRunner">The process runner.</param>
-        /// <param name="toolLocator">The tool locator</param>
+        /// <param name="toolLocator">The tool locator.</param>
         public CoverallsNetRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator toolLocator)
             : base(fileSystem, environment, processRunner, toolLocator)
         {
@@ -30,7 +30,7 @@ namespace Cake.Coveralls
         /// Publish the code coverage report to Coveralls.io using the specified settings.
         /// </summary>
         /// <param name="codeCoverageReportFilePath">The code coverage report file path.</param>
-        /// <param name="reportType">The Code Coverage Report Type</param>
+        /// <param name="reportType">The Code Coverage Report Type.</param>
         /// <param name="settings">The settings.</param>
         public void Run(FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings)
         {

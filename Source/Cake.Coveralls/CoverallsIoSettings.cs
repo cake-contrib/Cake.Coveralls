@@ -13,12 +13,12 @@ namespace Cake.Coveralls
         public bool Debug { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to send full sources instead of the digest
+        /// Gets or sets a value indicating whether to send full sources instead of the digest.
         /// </summary>
         public bool FullSources { get; set; }
 
         /// <summary>
-        /// Gets or sets the Repo Token to use when publishing to Coveralls.io
+        /// Gets or sets the Repo Token to use when publishing to <see href="https://coveralls.io/">Coveralls.io</see>.
         /// </summary>
         public string RepoToken { get; set; }
     }

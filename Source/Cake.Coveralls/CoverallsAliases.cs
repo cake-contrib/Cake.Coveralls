@@ -41,7 +41,7 @@ namespace Cake.Coveralls
         }
 
         /// <summary>
-        /// Uploads the code coverage report to Coveralls.io using the coveralls.io tool with the specified settings
+        /// Uploads the code coverage report to Coveralls.io using the coveralls.io tool with the specified settings.
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="codeCoverageReportFilePath">The path to the code coverage file.</param>
