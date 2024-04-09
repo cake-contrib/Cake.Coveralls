@@ -18,6 +18,6 @@
         /// <summary>
         /// Reads input as monocov results folder.
         /// </summary>
-        Monocov
+        Monocov,
     }
 }
