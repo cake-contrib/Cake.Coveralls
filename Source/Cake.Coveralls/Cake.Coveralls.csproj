@@ -22,11 +22,11 @@
       <PackageTags>cake;script;build;coveralls;cake-addin;cake-build;addin</PackageTags>
       <RepositoryUrl>https://github.com/cake-contrib/Cake.Coveralls.git</RepositoryUrl>
       <PackageReleaseNotes>https://github.com/cake-contrib/Cake.Coveralls/releases/tag/$(Version)</PackageReleaseNotes>
+      <CodeAnalysisRuleSet>..\Cake.Coveralls.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup>
-    <CodeAnalysisRuleSet>Cake.Coveralls.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-
+  <ItemGroup>
+    <CakeContribGuidelinesOmitRecommendedConfigFile Include="stylecop.json" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Cake.Core" Version="4.0.0" PrivateAssets="All" />
     <PackageReference Include="CakeContrib.Guidelines" Version="1.5.1">
