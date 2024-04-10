@@ -6,7 +6,7 @@
     <IsPackable>false</IsPackable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <CodeAnalysisRuleSet>..\Cake.Coveralls.ruleset</CodeAnalysisRuleSet>
-    <NoWarn>$(NoWarn);SA1600</NoWarn>
+    <NoWarn>$(NoWarn);SA1600;CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
