@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Cake.Core;
+﻿using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
+using System;
+using System.Collections.Generic;
 
 namespace Cake.Coveralls
 {
