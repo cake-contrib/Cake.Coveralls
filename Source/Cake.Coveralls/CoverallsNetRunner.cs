@@ -34,15 +34,8 @@ namespace Cake.Coveralls
         /// <param name="settings">The settings.</param>
         public void Run(FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings)
         {
-            if (codeCoverageReportFilePath == null)
-            {
-                throw new ArgumentNullException(nameof(codeCoverageReportFilePath));
-            }
-
-            if (settings == null)
-            {
-                throw new ArgumentNullException(nameof(settings));
-            }
+            ArgumentNullException.ThrowIfNull(codeCoverageReportFilePath);
+            ArgumentNullException.ThrowIfNull(settings);
 
             Run(settings, GetArguments(codeCoverageReportFilePath, reportType, settings));
         }
