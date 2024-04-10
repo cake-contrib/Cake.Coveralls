@@ -58,20 +58,13 @@ namespace Cake.Coveralls
             return new[] { "csmacnz.Coveralls.exe", "csmacnz.Coveralls" };
         }
 
-        private static string GetReportType(CoverallsNetReportType reportType)
+        private static string GetReportType(CoverallsNetReportType reportType) => reportType switch
         {
-            switch (reportType)
-            {
-                case CoverallsNetReportType.OpenCover:
-                    return "--opencover";
-                case CoverallsNetReportType.DynamicCodeCoverage:
-                    return "--dynamiccodecoverage";
-                case CoverallsNetReportType.Monocov:
-                    return "--monocov";
-                default:
-                    throw new NotSupportedException("The provided output is not valid.");
-            }
-        }
+            CoverallsNetReportType.OpenCover => "--opencover",
+            CoverallsNetReportType.DynamicCodeCoverage => "--dynamiccodecoverage",
+            CoverallsNetReportType.Monocov => "--monocov",
+            _ => throw new NotSupportedException("The provided output is not valid."),
+        };
 
         private ProcessArgumentBuilder GetArguments(FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings)
         {
