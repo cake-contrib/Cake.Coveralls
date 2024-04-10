@@ -13,8 +13,10 @@ namespace Cake.Coveralls.Tests
             public void Should_Throw_If_Settings_Are_Null()
             {
                 // Given
-                var fixture = new CoverallsNetRunnerFixture();
-                fixture.Settings = null;
+                var fixture = new CoverallsNetRunnerFixture
+                {
+                    Settings = null,
+                };
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
