@@ -19,7 +19,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ windows-2019 ]
+        os: [ windows-2022 ]
 
     env:
       AZURE_PASSWORD: ${{ secrets.AZURE_PASSWORD }}
@@ -46,6 +46,16 @@ jobs:
 
       - name: Fetch all tags and branches
         run: git fetch --prune --unshallow
+
+      - uses: actions/setup-dotnet@v4.0.0
+        with:
+          dotnet-version: |
+            2.1.818
+            3.1.x
+            5.0.x
+            6.0.x
+            7.0.x
+            8.0.x
 
       - name: Cache Tools
         uses: actions/cache@v2
