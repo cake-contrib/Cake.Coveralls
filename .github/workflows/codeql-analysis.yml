@@ -17,7 +17,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
 
     strategy:
       fail-fast: false
@@ -39,18 +39,36 @@ jobs:
     - run: git checkout HEAD^2
       if: ${{ github.event_name == 'pull_request' }}
 
+    # ensure dotnet
+    - uses: actions/setup-dotnet@v4.0.0
+      with:
+        dotnet-version: |
+            5.0.x
+            8.0.x
+
+    # install libgit2-dev on ubuntu, so libgit2sharp works
+    - name: Install libgit-dev
+      if: runner.os == 'Linux'
+      run: sudo apt-get install -y libgit2-dev
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here or in a config file.
-        # By default, queries listed here will override any specified in a config file. 
+        # By default, queries listed here will override any specified in a config file.
         # Prefix the list here with "+" to use these queries and those in the config file.
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
-    - run: ./build.ps1
-      shell: pwsh
+    - name: Build project
+      uses: cake-build/cake-action@v1
+      with:
+        script-path: recipe.cake
+        target: DotNetCore-Build
+        verbosity: Normal
+        cake-version: 0.38.5
+        cake-bootstrap: true
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
