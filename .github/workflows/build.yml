@@ -79,11 +79,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           if-no-files-found: warn
-          name: issues
-          path: BuildArtifacts/report.html
+          name: ${{ matrix.os }} Issues
+          path: |
+            BuildArtifacts/report.html
+            BuildArtifacts/**/coverlet/*.xml
 
       - name: Upload Packages
         uses: actions/upload-artifact@v4
+        if: runner.os == 'Windows'
         with:
           if-no-files-found: warn
           name: package
