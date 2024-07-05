@@ -40,24 +40,10 @@ namespace Cake.Coveralls.Tests
             }
 
             [Theory]
+            [WindowsOnlyInlineData("C:/CoverallsNet/csmacnz.Coveralls.exe", "C:/CoverallsNet/csmacnz.Coveralls.exe")]
             [InlineData("/bin/tools/CoverallsNet/csmacnz.Coveralls.exe", "/bin/tools/CoverallsNet/csmacnz.Coveralls.exe")]
             [InlineData("./tools/CoverallsNet/csmacnz.Coveralls.exe", "/Working/tools/CoverallsNet/csmacnz.Coveralls.exe")]
             public void Should_Use_CoverallsNet_Runner_From_Tool_Path_If_Provided(string toolPath, string expected)
-            {
-                // Given
-                var fixture = new CoverallsNetRunnerFixture { Settings = { ToolPath = toolPath } };
-                fixture.GivenSettingsToolPathExist();
-
-                // When
-                var result = fixture.Run();
-
-                // Then
-                Assert.Equal(expected, result.Path.FullPath);
-            }
-
-            [Theory]
-            [InlineData("C:/CoverallsNet/csmacnz.Coveralls.exe", "C:/CoverallsNet/csmacnz.Coveralls.exe")]
-            public void Should_Use_CoverallsNet_Runner_From_Tool_Path_If_Provided_On_Windows(string toolPath, string expected)
             {
                 // Given
                 var fixture = new CoverallsNetRunnerFixture { Settings = { ToolPath = toolPath } };
@@ -88,7 +74,7 @@ namespace Cake.Coveralls.Tests
             {
                 // Given
                 var fixture = new CoverallsNetRunnerFixture();
-                fixture.CodeCoverageReportFilePath = null;
+                fixture.WithoutCodeCoverageReportFilePath();
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
@@ -141,17 +127,20 @@ namespace Cake.Coveralls.Tests
                 Assert.Equal("CoverallsNet: Process returned an error (exit code 1).", result.Message);
             }
 
-            [Fact]
-            public void Should_Set_Output_File_Path()
+            [Theory]
+            [WindowsOnlyInlineData("c:/temp/output.xml", "c:/temp/output.xml")]
+            [InlineData("/temp/output.xml", "/temp/output.xml")]
+            [InlineData("./temp/output.xml", "/Working/temp/output.xml")]
+            public void Should_Set_Output_File_Path(string path, string expected)
             {
                 // Given
-                var fixture = new CoverallsNetRunnerFixture { Settings = { OutputFilePath = "c:/temp/output.xml" } };
+                var fixture = new CoverallsNetRunnerFixture { Settings = { OutputFilePath = path } };
 
                 // When
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --output \"c:/temp/output.xml\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --output \"{expected}\"", result.Args);
             }
 
             [Fact]
@@ -164,20 +153,23 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --useRelativePaths", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --useRelativePaths", result.Args);
             }
 
-            [Fact]
-            public void Should_Set_Base_File_Path()
+            [Theory]
+            [WindowsOnlyInlineData("c:/temp", "c:/temp")]
+            [InlineData("/temp", "/temp")]
+            [InlineData("./temp", "/Working/temp")]
+            public void Should_Set_Base_File_Path(string path, string expected)
             {
                 // Given
-                var fixture = new CoverallsNetRunnerFixture { Settings = { BaseFilePath = "c:/temp" } };
+                var fixture = new CoverallsNetRunnerFixture { Settings = { BaseFilePath = path } };
 
                 // When
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --basePath \"c:/temp\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --basePath \"{expected}\"", result.Args);
             }
 
             [Fact]
@@ -190,7 +182,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --repoToken \"abcdef\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --repoToken \"abcdef\"", result.Args);
             }
 
             [Fact]
@@ -203,7 +195,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --repoTokenVariable \"COVERALLS_REPO_TOKEN\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --repoTokenVariable \"COVERALLS_REPO_TOKEN\"", result.Args);
             }
 
             [Fact]
@@ -216,7 +208,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --commitId \"123456\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --commitId \"123456\"", result.Args);
             }
 
             [Fact]
@@ -229,7 +221,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --commitBranch \"master\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --commitBranch \"master\"", result.Args);
             }
 
             [Fact]
@@ -242,7 +234,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --commitAuthor \"gep13\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --commitAuthor \"gep13\"", result.Args);
             }
 
             [Fact]
@@ -255,7 +247,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --commitEmail \"gep13@gep13.co.uk\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --commitEmail \"gep13@gep13.co.uk\"", result.Args);
             }
 
             [Fact]
@@ -268,7 +260,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --commitMessage \"boom!\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --commitMessage \"boom!\"", result.Args);
             }
 
             [Fact]
@@ -281,7 +273,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --jobId 123456", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --jobId 123456", result.Args);
             }
 
             [Fact]
@@ -294,7 +286,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --serviceName \"coveralls.net\"", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --serviceName \"coveralls.net\"", result.Args);
             }
 
             [Fact]
@@ -307,7 +299,7 @@ namespace Cake.Coveralls.Tests
                 var result = fixture.Run();
 
                 // Then
-                Assert.Equal("--opencover --input \"c:/temp/coverage.xml\" --treatUploadErrorsAsWarnings", result.Args);
+                Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --treatUploadErrorsAsWarnings", result.Args);
             }
         }
     }

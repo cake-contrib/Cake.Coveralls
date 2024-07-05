@@ -8,18 +8,23 @@ namespace Cake.Coveralls.Tests
         public CoverallsNetRunnerFixture()
              : base("csmacnz.Coveralls.exe")
         {
-            CodeCoverageReportFilePath = "c:/temp/coverage.xml";
+            CodeCoverageReportFilePath = FileSystem.GetFile("/temp/coverage.xml").Path.FullPath;
             ReportType = CoverallsNetReportType.OpenCover;
         }
 
-        public FilePath CodeCoverageReportFilePath { get; set; }
+        public FilePath CodeCoverageReportFilePath { get; private set; }
 
-        public CoverallsNetReportType ReportType { get; set; }
+        public CoverallsNetReportType ReportType { get; }
 
         protected override void RunTool()
         {
             var tool = new CoverallsNetRunner(FileSystem, Environment, ProcessRunner, Tools);
             tool.Run(CodeCoverageReportFilePath, ReportType, Settings);
+        }
+
+        public void WithoutCodeCoverageReportFilePath()
+        {
+            CodeCoverageReportFilePath = null;
         }
     }
 }
