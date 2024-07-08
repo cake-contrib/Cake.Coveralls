@@ -167,6 +167,26 @@ namespace Cake.Coveralls.Tests
                 // Then
                 Assert.Equal($"--opencover \"{fixture.CodeCoverageReportFilePath}\" --repo-token \"abcdef\"", result.Args);
             }
+
+            [Theory]
+            [InlineData(null, "--opencover")]
+            [InlineData(CoverallsIoReportType.OpenCover, "--opencover")]
+            [InlineData(CoverallsIoReportType.Cobertura, "--cobertura")]
+            public void Should_Set_ReportType(CoverallsIoReportType? reportType, string expected)
+            {
+                // Given
+                var fixture = new CoverallsIoRunnerFixture();
+                if (reportType.HasValue)
+                {
+                    fixture.Settings.ReportType = reportType.Value;
+                }
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal($"{expected} \"{fixture.CodeCoverageReportFilePath}\"", result.Args);
+            }
         }
     }
 }

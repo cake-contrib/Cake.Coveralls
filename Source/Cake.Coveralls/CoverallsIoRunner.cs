@@ -57,11 +57,17 @@ namespace Cake.Coveralls
             return new[] { "coveralls.net.exe" };
         }
 
+        private static string GetReportType(CoverallsIoReportType reportType) => reportType switch
+        {
+            CoverallsIoReportType.OpenCover => "--opencover",
+            CoverallsIoReportType.Cobertura => "--cobertura",
+            _ => throw new NotSupportedException("The provided output is not valid."),
+        };
+
         private ProcessArgumentBuilder GetArguments(FilePath codeCoverageReportFilePath, CoverallsIoSettings settings)
         {
             var builder = new ProcessArgumentBuilder();
-
-            builder.Append("--opencover");
+            builder.Append(GetReportType(settings.ReportType));
             builder.AppendQuoted(codeCoverageReportFilePath.MakeAbsolute(_environment).FullPath);
 
             if (settings.Debug)
