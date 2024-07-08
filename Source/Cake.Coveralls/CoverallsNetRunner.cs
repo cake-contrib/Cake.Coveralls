@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Cake.Core;
+﻿using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
+using System;
+using System.Collections.Generic;
 
 namespace Cake.Coveralls
 {
@@ -19,7 +19,7 @@ namespace Cake.Coveralls
         /// <param name="fileSystem">The file system.</param>
         /// <param name="environment">The environment.</param>
         /// <param name="processRunner">The process runner.</param>
-        /// <param name="toolLocator">The tool locator</param>
+        /// <param name="toolLocator">The tool locator.</param>
         public CoverallsNetRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator toolLocator)
             : base(fileSystem, environment, processRunner, toolLocator)
         {
@@ -30,19 +30,12 @@ namespace Cake.Coveralls
         /// Publish the code coverage report to Coveralls.io using the specified settings.
         /// </summary>
         /// <param name="codeCoverageReportFilePath">The code coverage report file path.</param>
-        /// <param name="reportType">The Code Coverage Report Type</param>
+        /// <param name="reportType">The Code Coverage Report Type.</param>
         /// <param name="settings">The settings.</param>
         public void Run(FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings)
         {
-            if (codeCoverageReportFilePath == null)
-            {
-                throw new ArgumentNullException(nameof(codeCoverageReportFilePath));
-            }
-
-            if (settings == null)
-            {
-                throw new ArgumentNullException(nameof(settings));
-            }
+            ArgumentNullException.ThrowIfNull(codeCoverageReportFilePath);
+            ArgumentNullException.ThrowIfNull(settings);
 
             Run(settings, GetArguments(codeCoverageReportFilePath, reportType, settings));
         }
@@ -65,20 +58,13 @@ namespace Cake.Coveralls
             return new[] { "csmacnz.Coveralls.exe", "csmacnz.Coveralls" };
         }
 
-        private static string GetReportType(CoverallsNetReportType reportType)
+        private static string GetReportType(CoverallsNetReportType reportType) => reportType switch
         {
-            switch (reportType)
-            {
-                case CoverallsNetReportType.OpenCover:
-                    return "--opencover";
-                case CoverallsNetReportType.DynamicCodeCoverage:
-                    return "--dynamiccodecoverage";
-                case CoverallsNetReportType.Monocov:
-                    return "--monocov";
-                default:
-                    throw new NotSupportedException("The provided output is not valid.");
-            }
-        }
+            CoverallsNetReportType.OpenCover => "--opencover",
+            CoverallsNetReportType.DynamicCodeCoverage => "--dynamiccodecoverage",
+            CoverallsNetReportType.Monocov => "--monocov",
+            _ => throw new NotSupportedException("The provided output is not valid."),
+        };
 
         private ProcessArgumentBuilder GetArguments(FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings)
         {

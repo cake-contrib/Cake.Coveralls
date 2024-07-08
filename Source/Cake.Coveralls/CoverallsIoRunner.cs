@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Cake.Core;
+﻿using Cake.Core;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
+using System;
+using System.Collections.Generic;
 
 namespace Cake.Coveralls
 {
@@ -19,7 +19,7 @@ namespace Cake.Coveralls
         /// <param name="fileSystem">The file system.</param>
         /// <param name="environment">The environment.</param>
         /// <param name="processRunner">The process runner.</param>
-        /// <param name="toolLocator">The tool locator</param>
+        /// <param name="toolLocator">The tool locator.</param>
         public CoverallsIoRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator toolLocator)
             : base(fileSystem, environment, processRunner, toolLocator)
         {
@@ -33,15 +33,8 @@ namespace Cake.Coveralls
         /// <param name="settings">The settings.</param>
         public void Run(FilePath codeCoverageReportFilePath, CoverallsIoSettings settings)
         {
-            if (codeCoverageReportFilePath == null)
-            {
-                throw new ArgumentNullException(nameof(codeCoverageReportFilePath));
-            }
-
-            if (settings == null)
-            {
-                throw new ArgumentNullException(nameof(settings));
-            }
+            ArgumentNullException.ThrowIfNull(codeCoverageReportFilePath);
+            ArgumentNullException.ThrowIfNull(settings);
 
             Run(settings, GetArguments(codeCoverageReportFilePath, settings));
         }

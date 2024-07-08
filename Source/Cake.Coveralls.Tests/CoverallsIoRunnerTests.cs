@@ -1,6 +1,6 @@
-﻿using System;
-using Cake.Core;
+﻿using Cake.Core;
 using Cake.Testing;
+using System;
 using Xunit;
 
 namespace Cake.Coveralls.Tests
@@ -13,8 +13,10 @@ namespace Cake.Coveralls.Tests
             public void Should_Throw_If_Settings_Are_Null()
             {
                 // Given
-                var fixture = new CoverallsIoRunnerFixture();
-                fixture.Settings = null;
+                var fixture = new CoverallsIoRunnerFixture
+                {
+                    Settings = null,
+                };
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
