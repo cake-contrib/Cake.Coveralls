@@ -22,6 +22,9 @@ namespace Cake.Coveralls
         /// </summary>
         public string RepoToken { get; set; }
 
-        public CoverageParseType ParseType { get; set; } = CoverageParseType.opencover;
+        /// <summary>
+        /// Gets or sets the type of the report.
+        /// </summary>
+        public CoverallsIoReportType ReportType { get; set; } = CoverallsIoReportType.OpenCover;
     }
 }
