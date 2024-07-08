@@ -6,6 +6,10 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="$(ProjectDir)../../README.md" Link="README.md" PackagePath="" Pack="true" />
+  </ItemGroup>
 
   <PropertyGroup>
       <StartYear>2016</StartYear>
