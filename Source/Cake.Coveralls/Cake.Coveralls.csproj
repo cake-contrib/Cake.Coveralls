@@ -29,7 +29,7 @@
       <CodeAnalysisRuleSet>..\Cake.Coveralls.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <CakeContribGuidelinesOmitRecommendedConfigFile Include="stylecop.json" />
+    <CakeContribGuidelinesOmitRecommendedConfigFile Include="stylecop.json" Visible="false"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Cake.Core" Version="4.0.0" PrivateAssets="All" />
