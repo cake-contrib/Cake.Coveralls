@@ -1,6 +1,6 @@
-﻿using System;
-using Cake.Core;
+﻿using Cake.Core;
 using Cake.Testing;
+using System;
 using Xunit;
 
 namespace Cake.Coveralls.Tests
@@ -13,8 +13,10 @@ namespace Cake.Coveralls.Tests
             public void Should_Throw_If_Settings_Are_Null()
             {
                 // Given
-                var fixture = new CoverallsIoRunnerFixture();
-                fixture.Settings = null;
+                var fixture = new CoverallsIoRunnerFixture
+                {
+                    Settings = null,
+                };
 
                 // When
                 var result = Record.Exception(() => fixture.Run());
@@ -164,6 +166,26 @@ namespace Cake.Coveralls.Tests
 
                 // Then
                 Assert.Equal($"--opencover \"{fixture.CodeCoverageReportFilePath}\" --repo-token \"abcdef\"", result.Args);
+            }
+
+            [Theory]
+            [InlineData(null, "--opencover")]
+            [InlineData(CoverallsIoReportType.OpenCover, "--opencover")]
+            [InlineData(CoverallsIoReportType.Cobertura, "--cobertura")]
+            public void Should_Set_ReportType(CoverallsIoReportType? reportType, string expected)
+            {
+                // Given
+                var fixture = new CoverallsIoRunnerFixture();
+                if (reportType.HasValue)
+                {
+                    fixture.Settings.ReportType = reportType.Value;
+                }
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.Equal($"{expected} \"{fixture.CodeCoverageReportFilePath}\"", result.Args);
             }
         }
     }
