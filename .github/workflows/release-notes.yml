@@ -21,13 +21,13 @@ jobs:
           key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
       - name: Set up git version
         if: ${{ !contains(github.ref, '/hotfix/') && !contains(github.ref, '/release/') }}
-        uses: gittools/actions/gitversion/setup@8d68520cde93ca9226ee0e09870caaca033d2cd2 # v1.1.1
+        uses: gittools/actions/gitversion/setup@dcb17efb49ec7f20efdebce79cc397a3952c63db # v1.2.0
         with:
           versionSpec: "5.x"
       - name: Run git version
         if: ${{ !contains(github.ref, '/hotfix/') && !contains(github.ref, '/release/') }}
         id: gitversion
-        uses: gittools/actions/gitversion/execute@8d68520cde93ca9226ee0e09870caaca033d2cd2 # v1.1.1
+        uses: gittools/actions/gitversion/execute@dcb17efb49ec7f20efdebce79cc397a3952c63db # v1.2.0
       - name: Create release branch ${{ github.event.inputs.version }}
         if: ${{ steps.gitversion.outputs.majorMinorPatch }}
         run: git switch -c release/${{ steps.gitversion.outputs.majorMinorPatch }}
