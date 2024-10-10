@@ -75,7 +75,7 @@ jobs:
           cake-version: tool-manifest
 
       - name: Upload Issues-Report
-        uses: actions/upload-artifact@834a144ee995460fba8ed112a2fc961b36a5ec5a # v4
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4
         with:
           if-no-files-found: warn
           name: ${{ matrix.os }} Issues
@@ -84,7 +84,7 @@ jobs:
             BuildArtifacts/**/coverlet/*.xml
 
       - name: Upload Packages
-        uses: actions/upload-artifact@834a144ee995460fba8ed112a2fc961b36a5ec5a # v4
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4
         if: runner.os == 'Windows'
         with:
           if-no-files-found: warn
