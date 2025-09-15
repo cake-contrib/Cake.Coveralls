@@ -41,6 +41,21 @@ namespace Cake.Coveralls
         }
 
         /// <summary>
+        /// Publish the code coverage report to Coveralls.io using the specified settings.
+        /// </summary>
+        /// <param name="codeCoverageReportFilePath">The code coverage report file path.</param>
+        /// <param name="reportType">The Code Coverage Report Type.</param>
+        /// <param name="settings">The settings.</param>
+        /// <param name="processSettings">The process settings.</param>
+        public void Run(FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings, ProcessSettings processSettings)
+        {
+            ArgumentNullException.ThrowIfNull(codeCoverageReportFilePath);
+            ArgumentNullException.ThrowIfNull(settings);
+
+            Run(settings, GetArguments(codeCoverageReportFilePath, reportType, settings), processSettings, null);
+        }
+
+        /// <summary>
         /// Gets the name of the tool.
         /// </summary>
         /// <returns>The name of the tool.</returns>

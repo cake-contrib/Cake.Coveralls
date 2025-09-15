@@ -57,8 +57,29 @@ namespace Cake.Coveralls
         [CakeMethodAlias]
         public static void CoverallsIo(this ICakeContext context, FilePath codeCoverageReportFilePath, CoverallsIoSettings settings)
         {
+            CoverallsIo(context, codeCoverageReportFilePath, settings, null);
+        }
+
+        /// <summary>
+        /// Uploads the code coverage report to Coveralls.io using the coveralls.io tool with the specified settings.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        /// <param name="codeCoverageReportFilePath">The path to the code coverage file.</param>
+        /// <param name="settings">The settings.</param>
+        /// <param name="processSettings">The process settings.</param>
+        /// <example>
+        /// <code>
+        /// CoverallsIo("coverage.xml", new CoverallsIoSettings()
+        /// {
+        ///     RepoToken = "abcdef"
+        /// });
+        /// </code>
+        /// </example>
+        [CakeMethodAlias]
+        public static void CoverallsIo(this ICakeContext context, FilePath codeCoverageReportFilePath, CoverallsIoSettings settings, ProcessSettings processSettings)
+        {
             var runner = new CoverallsIoRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
-            runner.Run(codeCoverageReportFilePath, settings);
+            runner.Run(codeCoverageReportFilePath, settings, processSettings);
         }
 
         /// <summary>
@@ -96,8 +117,30 @@ namespace Cake.Coveralls
         [CakeMethodAlias]
         public static void CoverallsNet(this ICakeContext context, FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings)
         {
+            CoverallsNet(context, codeCoverageReportFilePath, reportType, settings, null);
+        }
+
+        /// <summary>
+        /// Uploads the code coverage report to Coveralls.io using the coveralls.net tool with the specified settings.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        /// <param name="codeCoverageReportFilePath">The path to the code coverage file.</param>
+        /// <param name="reportType">The type of the code coverage report.</param>
+        /// <param name="settings">The settings.</param>
+        /// <param name="processSettings">The process settings.</param>
+        /// <example>
+        /// <code>
+        /// CoverallsNet("coverage.xml", CoverallsNetReportType.OpenCover, new CoverallsNetSettings()
+        /// {
+        ///     RepoToken = "abcdef"
+        /// });
+        /// </code>
+        /// </example>
+        [CakeMethodAlias]
+        public static void CoverallsNet(this ICakeContext context, FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings, ProcessSettings processSettings)
+        {
             var runner = new CoverallsNetRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
-            runner.Run(codeCoverageReportFilePath, reportType, settings);
+            runner.Run(codeCoverageReportFilePath, reportType, settings, processSettings);
         }
     }
 }
