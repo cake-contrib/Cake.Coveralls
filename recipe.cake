@@ -1,4 +1,4 @@
-#load nuget:?package=Cake.Recipe&version=3.1.1
+#load nuget:?package=Cake.Recipe&version=4.0.0
 
 Environment.SetVariableNames();
 
@@ -10,7 +10,6 @@ BuildParameters.SetParameters(context: Context,
                             repositoryName: "Cake.Coveralls",
                             appVeyorAccountName: "cakecontrib",
                             shouldRunCodecov: false,
-                            shouldPostToGitter: false,
                             shouldRunDotNetCorePack: true,
                             preferredBuildProviderType: BuildProviderType.GitHubActions,
                             shouldGenerateDocumentation: false);

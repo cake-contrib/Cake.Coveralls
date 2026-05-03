@@ -1,14 +1,20 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-      "github>cake-contrib/renovate-presets:cake-recipe",
-      "github>cake-contrib/renovate-presets:github-actions" ],
-    "packageRules": [
-      {
-        "description": "Updates to Cake.Core references are breaking.",
-        "matchPackageNames": ["Cake.Core"],
-        "matchUpdateTypes": ["major"],
-        "labels": ["Breaking Change"]
-      }
-    ]
-  }
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>cake-contrib/renovate-presets:cake-recipe",
+    "github>cake-contrib/renovate-presets:github-actions" ],
+  "packageRules": [
+    {
+      "description": "Update Cake references only for major updates.",
+      "matchPackageNames": ["Cake.Core", "Cake.Common"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "enabled": false
+    },
+    {
+      "description": "Updates to Cake.Core references are breaking.",
+      "matchPackageNames": ["Cake.Core"],
+      "matchUpdateTypes": ["major"],
+      "labels": ["Breaking Change"]
+    }
+  ]
+}
