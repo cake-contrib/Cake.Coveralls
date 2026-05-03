@@ -182,6 +182,9 @@ _pkginfo.txt
 # but keep track of directories ending in .cache
 !*.[Cc]ache/
 
+# Cake / language-service cache artifacts (created by `dotnet build`)
+*.lscache
+
 # Others
 ClientBin/
 ~$*
