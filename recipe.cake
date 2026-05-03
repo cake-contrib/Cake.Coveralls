@@ -10,7 +10,6 @@ BuildParameters.SetParameters(context: Context,
                             repositoryName: "Cake.Coveralls",
                             appVeyorAccountName: "cakecontrib",
                             shouldRunCodecov: false,
-                            shouldPostToGitter: false,
                             shouldRunDotNetCorePack: true,
                             preferredBuildProviderType: BuildProviderType.GitHubActions,
                             shouldGenerateDocumentation: false);
