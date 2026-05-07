@@ -20,7 +20,7 @@ namespace Cake.Coveralls
         /// <summary>
         /// Gets or sets the Repo Token to use when publishing to <see href="https://coveralls.io/">Coveralls.io</see>.
         /// </summary>
-        public string RepoToken { get; set; }
+        public string? RepoToken { get; set; }
 
         /// <summary>
         /// Gets or sets the type of the report.
