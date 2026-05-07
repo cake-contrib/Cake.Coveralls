@@ -12,9 +12,11 @@ namespace Cake.Coveralls.Tests
             ReportType = CoverallsNetReportType.OpenCover;
         }
 
-        public FilePath CodeCoverageReportFilePath { get; private set; }
+        public FilePath? CodeCoverageReportFilePath { get; private set; }
 
         public CoverallsNetReportType ReportType { get; }
+
+        public ProcessSettings? ProcessSettings { get; set; }
 
         public void WithoutCodeCoverageReportFilePath()
         {
@@ -24,7 +26,7 @@ namespace Cake.Coveralls.Tests
         protected override void RunTool()
         {
             var tool = new CoverallsNetRunner(FileSystem, Environment, ProcessRunner, Tools);
-            tool.Run(CodeCoverageReportFilePath, ReportType, Settings);
+            tool.Run(CodeCoverageReportFilePath!, ReportType, Settings, ProcessSettings);
         }
     }
 }

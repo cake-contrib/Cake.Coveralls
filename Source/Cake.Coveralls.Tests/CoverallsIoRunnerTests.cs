@@ -1,6 +1,7 @@
-﻿using Cake.Core;
+﻿using System;
+using Cake.Core;
+using Cake.Core.IO;
 using Cake.Testing;
-using System;
 using Xunit;
 
 namespace Cake.Coveralls.Tests
@@ -15,7 +16,7 @@ namespace Cake.Coveralls.Tests
                 // Given
                 var fixture = new CoverallsIoRunnerFixture
                 {
-                    Settings = null,
+                    Settings = null!,
                 };
 
                 // When
@@ -186,6 +187,38 @@ namespace Cake.Coveralls.Tests
 
                 // Then
                 Assert.Equal($"{expected} \"{fixture.CodeCoverageReportFilePath}\"", result.Args);
+            }
+
+            [Fact]
+            public void Should_Pass_Process_Settings_Through_To_Runner()
+            {
+                // Given
+                var fixture = new CoverallsIoRunnerFixture
+                {
+                    ProcessSettings = new ProcessSettings
+                    {
+                        RedirectStandardError = true,
+                    },
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.True(result.Process.RedirectStandardError);
+            }
+
+            [Fact]
+            public void Should_Default_To_No_Stderr_Redirect_When_Process_Settings_Are_Null()
+            {
+                // Given
+                var fixture = new CoverallsIoRunnerFixture();
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.False(result.Process.RedirectStandardError);
             }
         }
     }
