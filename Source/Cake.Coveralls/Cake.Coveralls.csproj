@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -23,7 +23,7 @@
       <Description>Cake AddIn that extends Cake with ability to post Code Coverage results to Coveralls.io.</Description>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <PackageProjectUrl>https://github.com/cake-contrib/Cake.Coveralls/</PackageProjectUrl>
-      <PackageTags>cake;script;build;coveralls;cake-addin;cake-build;addin</PackageTags>
+      <PackageTags>cake;cake-build;cake-addin;addin;script;build;coveralls</PackageTags>
       <RepositoryUrl>https://github.com/cake-contrib/Cake.Coveralls.git</RepositoryUrl>
       <PackageReleaseNotes>https://github.com/cake-contrib/Cake.Coveralls/releases/tag/$(Version)</PackageReleaseNotes>
       <CodeAnalysisRuleSet>..\Cake.Coveralls.ruleset</CodeAnalysisRuleSet>
@@ -36,7 +36,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Cake.Core" Version="4.0.0" PrivateAssets="All" />
+    <PackageReference Include="Cake.Core" Version="5.0.0" PrivateAssets="All" />
     <PackageReference Include="CakeContrib.Guidelines" Version="1.7.0" PrivateAssets="All" />
     <PackageReference Include="IDisposableAnalyzers" Version="4.0.8">
       <PrivateAssets>all</PrivateAssets>
