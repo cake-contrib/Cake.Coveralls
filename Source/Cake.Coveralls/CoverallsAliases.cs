@@ -61,18 +61,23 @@ namespace Cake.Coveralls
         }
 
         /// <summary>
-        /// Uploads the code coverage report to Coveralls.io using the coveralls.io tool with the specified settings.
+        /// Uploads the code coverage report to Coveralls.io using the coveralls.io tool with the specified settings, and the specified process settings.
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="codeCoverageReportFilePath">The path to the code coverage file.</param>
         /// <param name="settings">The settings.</param>
-        /// <param name="processSettings">The process settings.</param>
+        /// <param name="processSettings">The process settings, or <see langword="null"/> for the runner's defaults. Useful for redirecting standard error or output away from the build log.</param>
         /// <example>
         /// <code>
-        /// CoverallsIo("coverage.xml", new CoverallsIoSettings()
+        /// var processSettings = new ProcessSettings
         /// {
-        ///     RepoToken = "abcdef"
-        /// });
+        ///     RedirectStandardError = true,
+        ///     RedirectedStandardErrorHandler = line => null,
+        /// };
+        ///
+        /// CoverallsIo("coverage.xml",
+        ///     new CoverallsIoSettings { RepoToken = "abcdef" },
+        ///     processSettings);
         /// </code>
         /// </example>
         [CakeMethodAlias]
@@ -121,19 +126,25 @@ namespace Cake.Coveralls
         }
 
         /// <summary>
-        /// Uploads the code coverage report to Coveralls.io using the coveralls.net tool with the specified settings.
+        /// Uploads the code coverage report to Coveralls.io using the coveralls.net tool with the specified settings, and the specified process settings.
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="codeCoverageReportFilePath">The path to the code coverage file.</param>
         /// <param name="reportType">The type of the code coverage report.</param>
         /// <param name="settings">The settings.</param>
-        /// <param name="processSettings">The process settings.</param>
+        /// <param name="processSettings">The process settings, or <see langword="null"/> for the runner's defaults. Useful for redirecting standard error or output away from the build log.</param>
         /// <example>
         /// <code>
-        /// CoverallsNet("coverage.xml", CoverallsNetReportType.OpenCover, new CoverallsNetSettings()
+        /// var processSettings = new ProcessSettings
         /// {
-        ///     RepoToken = "abcdef"
-        /// });
+        ///     RedirectStandardError = true,
+        ///     RedirectedStandardErrorHandler = line => null,
+        /// };
+        ///
+        /// CoverallsNet("coverage.xml",
+        ///     CoverallsNetReportType.OpenCover,
+        ///     new CoverallsNetSettings { RepoToken = "abcdef" },
+        ///     processSettings);
         /// </code>
         /// </example>
         [CakeMethodAlias]
