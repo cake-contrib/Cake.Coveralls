@@ -1,5 +1,6 @@
 ﻿using System;
 using Cake.Core;
+using Cake.Core.IO;
 using Cake.Testing;
 using Xunit;
 
@@ -302,6 +303,38 @@ namespace Cake.Coveralls.Tests
 
                 // Then
                 Assert.Equal($"--opencover --input \"{fixture.CodeCoverageReportFilePath}\" --treatUploadErrorsAsWarnings", result.Args);
+            }
+
+            [Fact]
+            public void Should_Pass_Process_Settings_Through_To_Runner()
+            {
+                // Given
+                var fixture = new CoverallsNetRunnerFixture
+                {
+                    ProcessSettings = new ProcessSettings
+                    {
+                        RedirectStandardError = true,
+                    },
+                };
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.True(result.Process.RedirectStandardError);
+            }
+
+            [Fact]
+            public void Should_Default_To_No_Stderr_Redirect_When_Process_Settings_Are_Null()
+            {
+                // Given
+                var fixture = new CoverallsNetRunnerFixture();
+
+                // When
+                var result = fixture.Run();
+
+                // Then
+                Assert.False(result.Process.RedirectStandardError);
             }
         }
     }

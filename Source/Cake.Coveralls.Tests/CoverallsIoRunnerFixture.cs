@@ -13,6 +13,8 @@ namespace Cake.Coveralls.Tests
 
         public FilePath? CodeCoverageReportFilePath { get; private set; }
 
+        public ProcessSettings? ProcessSettings { get; set; }
+
         public void WithoutCodeCoverageReportFilePath()
         {
             CodeCoverageReportFilePath = null;
@@ -21,7 +23,7 @@ namespace Cake.Coveralls.Tests
         protected override void RunTool()
         {
             var tool = new CoverallsIoRunner(FileSystem, Environment, ProcessRunner, Tools);
-            tool.Run(CodeCoverageReportFilePath!, Settings);
+            tool.Run(CodeCoverageReportFilePath!, Settings, ProcessSettings);
         }
     }
 }
