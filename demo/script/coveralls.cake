@@ -1,4 +1,4 @@
-#reference "BuildArtifacts/temp/_PublishedLibraries/Cake.Coveralls/net8.0/Cake.Coveralls.dll"
+#reference "../../BuildArtifacts/temp/_PublishedLibraries/Cake.Coveralls/net8.0/Cake.Coveralls.dll"
 
 // Self-contained exercise of Cake.Coveralls' settings + alias surface.
 // Verifies the addin loads, the settings types can be constructed and
