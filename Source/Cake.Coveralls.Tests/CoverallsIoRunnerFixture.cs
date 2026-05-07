@@ -11,7 +11,7 @@ namespace Cake.Coveralls.Tests
             CodeCoverageReportFilePath = FileSystem.GetFile("/temp/coverage.xml").Path.FullPath;
         }
 
-        public FilePath CodeCoverageReportFilePath { get; private set; }
+        public FilePath? CodeCoverageReportFilePath { get; private set; }
 
         public void WithoutCodeCoverageReportFilePath()
         {
@@ -21,7 +21,7 @@ namespace Cake.Coveralls.Tests
         protected override void RunTool()
         {
             var tool = new CoverallsIoRunner(FileSystem, Environment, ProcessRunner, Tools);
-            tool.Run(CodeCoverageReportFilePath, Settings);
+            tool.Run(CodeCoverageReportFilePath!, Settings);
         }
     }
 }
