@@ -76,7 +76,7 @@ namespace Cake.Coveralls
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        public static void CoverallsIo(this ICakeContext context, FilePath codeCoverageReportFilePath, CoverallsIoSettings settings, ProcessSettings processSettings)
+        public static void CoverallsIo(this ICakeContext context, FilePath codeCoverageReportFilePath, CoverallsIoSettings settings, ProcessSettings? processSettings)
         {
             var runner = new CoverallsIoRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
             runner.Run(codeCoverageReportFilePath, settings, processSettings);
@@ -137,7 +137,7 @@ namespace Cake.Coveralls
         /// </code>
         /// </example>
         [CakeMethodAlias]
-        public static void CoverallsNet(this ICakeContext context, FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings, ProcessSettings processSettings)
+        public static void CoverallsNet(this ICakeContext context, FilePath codeCoverageReportFilePath, CoverallsNetReportType reportType, CoverallsNetSettings settings, ProcessSettings? processSettings)
         {
             var runner = new CoverallsNetRunner(context.FileSystem, context.Environment, context.ProcessRunner, context.Tools);
             runner.Run(codeCoverageReportFilePath, reportType, settings, processSettings);

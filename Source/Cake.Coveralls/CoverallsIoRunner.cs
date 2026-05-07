@@ -33,10 +33,7 @@ namespace Cake.Coveralls
         /// <param name="settings">The settings.</param>
         public void Run(FilePath codeCoverageReportFilePath, CoverallsIoSettings settings)
         {
-            ArgumentNullException.ThrowIfNull(codeCoverageReportFilePath);
-            ArgumentNullException.ThrowIfNull(settings);
-
-            Run(settings, GetArguments(codeCoverageReportFilePath, settings));
+            Run(codeCoverageReportFilePath, settings, null);
         }
 
         /// <summary>
@@ -44,8 +41,8 @@ namespace Cake.Coveralls
         /// </summary>
         /// <param name="codeCoverageReportFilePath">The code coverage report file path.</param>
         /// <param name="settings">The settings.</param>
-        /// <param name="processSettings">The process settings.</param>
-        public void Run(FilePath codeCoverageReportFilePath, CoverallsIoSettings settings, ProcessSettings processSettings)
+        /// <param name="processSettings">The process settings, or <see langword="null"/> for the runner's defaults.</param>
+        public void Run(FilePath codeCoverageReportFilePath, CoverallsIoSettings settings, ProcessSettings? processSettings)
         {
             ArgumentNullException.ThrowIfNull(codeCoverageReportFilePath);
             ArgumentNullException.ThrowIfNull(settings);
