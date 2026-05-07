@@ -1,6 +1,6 @@
-﻿using Cake.Core;
+﻿using System;
+using Cake.Core;
 using Cake.Testing;
-using System;
 using Xunit;
 
 namespace Cake.Coveralls.Tests
@@ -15,7 +15,7 @@ namespace Cake.Coveralls.Tests
                 // Given
                 var fixture = new CoverallsIoRunnerFixture
                 {
-                    Settings = null,
+                    Settings = null!,
                 };
 
                 // When
